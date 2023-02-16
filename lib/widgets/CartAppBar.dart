@@ -1,9 +1,10 @@
-// ignore_for_file: use_key_in_widget_constructors, camel_case_types
+// ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:tunzaaecommerce/pages/homepage.dart';
 
 class cartAppBar extends StatelessWidget {
+  const cartAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,15 +14,27 @@ class cartAppBar extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              Navigator.pop(context, true);
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => HomePage(),
-              ));
+              Navigator.pop(context);
             },
             child: const Icon(
               Icons.arrow_back,
               size: 30,
             ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: Text(
+              "Cart",
+              style: TextStyle(
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF4C53A5)),
+            ),
+          ),
+          const Spacer(),
+          const Icon(
+            Icons.more_vert,
+            size: 30,
           )
         ],
       ),
