@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields
 
 import 'package:flutter/material.dart';
 import 'package:tunzaaecommerce/widgets/home_bar.dart';
@@ -10,7 +10,6 @@ import '../widgets/itemsWidget.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-  int _page = 0;
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   @override
@@ -127,9 +126,7 @@ class HomePage extends StatelessWidget {
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
         onTap: (index) {
-          setState(() {
-            _page = index;
-          });
+          setState(() {});
         },
         letIndexChange: (index) => true,
       ),
