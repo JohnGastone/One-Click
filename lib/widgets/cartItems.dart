@@ -63,6 +63,7 @@ class CartItems extends StatelessWidget {
                         color: Colors.blueGrey,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             padding: EdgeInsets.all(4),
@@ -81,7 +82,7 @@ class CartItems extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(horizontal: 15),
+                            margin: EdgeInsets.symmetric(horizontal: 1),
                             child: Text(
                               '01',
                               style: TextStyle(

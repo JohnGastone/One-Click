@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:tunzaaecommerce/pages/homepage.dart';
 
 class cartAppBar extends StatelessWidget {
   const cartAppBar({super.key});
@@ -15,6 +16,9 @@ class cartAppBar extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.pop(context);
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => HomePage(),
+              ));
             },
             child: const Icon(
               Icons.arrow_back,

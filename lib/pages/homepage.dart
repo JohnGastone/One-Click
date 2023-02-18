@@ -7,6 +7,35 @@ import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
 import '../widgets/categoriesWidget.dart';
 import '../widgets/itemsWidget.dart';
 
+class Product {
+  final int id;
+  final String title;
+  final double price;
+  final String description;
+  final String category;
+  final String image;
+
+  Product({
+    required this.id,
+    required this.title,
+    required this.price,
+    required this.description,
+    required this.category,
+    required this.image,
+  });
+
+  factory Product.fromJson(Map<String, dynamic> json) {
+    return Product(
+      id: json['id'],
+      title: json['title'],
+      price: json['price'].toDouble(),
+      description: json['description'],
+      category: json['category'],
+      image: json['image'],
+    );
+  }
+}
+
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
@@ -63,7 +92,7 @@ class HomePage extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                   child: Text(
-                    "Categories",
+                    "Varieties",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

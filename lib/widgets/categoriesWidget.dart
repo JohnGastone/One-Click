@@ -1,8 +1,21 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 
+class Product {
+  final String name;
+  final double price;
+
+  Product({required this.name, required this.price});
+}
+
 class CategoriesWidget extends StatelessWidget {
-  const CategoriesWidget({super.key});
+  CategoriesWidget({super.key});
+
+  final List<Product> _products = [
+    Product(name: 'Product A', price: 10),
+    Product(name: 'Product B', price: 20),
+    Product(name: 'Product C', price: 30),
+  ];
 
   @override
   Widget build(BuildContext context) {
