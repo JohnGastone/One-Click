@@ -15,7 +15,7 @@ class HomeAppBar extends StatelessWidget {
       child: Row(
         children: [
           Icon(
-            Icons.sort,
+            Icons.local_mall,
             size: 30,
             color: Color(0xFF4C53A5),
           ),
@@ -45,7 +45,7 @@ class HomeAppBar extends StatelessWidget {
                 ));
               },
               child: Icon(
-                Icons.shopping_bag_outlined,
+                Icons.shopping_cart,
                 size: 33,
                 color: Color(0xFF4C53A5),
               ),

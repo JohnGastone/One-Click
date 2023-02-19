@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       Icon(
-                        Icons.camera_alt,
+                        Icons.sort,
                         color: Color.fromARGB(255, 140, 144, 182),
                       )
                     ],
@@ -125,7 +125,8 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        color: Color(0xFF4C53A5),
+        backgroundColor: Color(0xFFEDECF2),
+        //color: Color.fromARGB(255, 158, 164, 168),
         key: _bottomNavigationKey,
         index: 0,
         height: 70.0,

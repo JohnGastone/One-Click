@@ -29,6 +29,9 @@ class ItemPageBar extends StatelessWidget {
                   color: Color(0xFF4C53A5),
                 )),
           ),
+          SizedBox(
+            width: 140,
+          ),
           Icon(
             Icons.favorite_border_outlined,
             size: 30,

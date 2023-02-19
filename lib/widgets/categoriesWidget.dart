@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
+import '../data/data.dart';
 
 class Product {
   final String name;
@@ -10,12 +11,6 @@ class Product {
 
 class CategoriesWidget extends StatelessWidget {
   CategoriesWidget({super.key});
-
-  final List<Product> _products = [
-    Product(name: 'Product A', price: 10),
-    Product(name: 'Product B', price: 20),
-    Product(name: 'Product C', price: 30),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +36,7 @@ class CategoriesWidget extends StatelessWidget {
                   ),
                   Text(
                     "Skonkinko",
-                    style: TextStyle(fontSize: 10, color: Colors.grey),
+                    style: TextStyle(fontSize: 20, color: Colors.grey),
                   )
                 ],
               ),
