@@ -28,29 +28,59 @@ class MyApp extends StatelessWidget {
 class TestScreen extends StatelessWidget {
   final List<Introduction> list = [
     Introduction(
-      title: 'Register',
+      title: 'Register.',
+      titleTextStyle: TextStyle(
+          fontSize: 28,
+          color: Color.fromARGB(255, 92, 120, 134),
+          fontWeight: FontWeight.bold),
       subTitle: 'Register by filling the required information.',
+      subTitleTextStyle: TextStyle(
+          color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/registration.png',
     ),
     Introduction(
-      title: 'Place Order',
+      title: 'Place Order.',
+      titleTextStyle: TextStyle(
+          fontSize: 28,
+          color: Color.fromARGB(255, 92, 120, 134),
+          fontWeight: FontWeight.bold),
       subTitle: 'Browse the menu and order directly from the application.',
+      subTitleTextStyle: TextStyle(
+          color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/cart.png',
     ),
     Introduction(
-      title: 'Wait for delivery',
+      title: 'Wait for delivery.',
+      titleTextStyle: TextStyle(
+          fontSize: 28,
+          color: Color.fromARGB(255, 92, 120, 134),
+          fontWeight: FontWeight.bold),
       subTitle:
           'Your order will be immediately collected, packed and delivered.',
+      subTitleTextStyle: TextStyle(
+          color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/waiting.png',
     ),
     Introduction(
       title: '....>>>',
+      titleTextStyle: TextStyle(
+          fontSize: 28,
+          color: Color.fromARGB(255, 92, 120, 134),
+          fontWeight: FontWeight.bold),
       subTitle: 'On the run.',
+      subTitleTextStyle: TextStyle(
+          color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/deli2.jpg',
     ),
     Introduction(
-      title: 'Receive your order',
+      title: 'Receive your order.',
+      titleTextStyle: TextStyle(
+          fontSize: 28,
+          color: Color.fromARGB(255, 92, 120, 134),
+          fontWeight: FontWeight.bold),
       subTitle: 'Receive your order in no time.',
+      subTitleTextStyle: TextStyle(
+          color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/deli.jpg',
     ),
   ];
