@@ -17,7 +17,7 @@ class ItemPageBar extends StatelessWidget {
             child: Icon(
               Icons.arrow_back,
               size: 30,
-              color: Color(0xFF4C53A5),
+              color: Colors.blueGrey,
             ),
           ),
           Padding(
@@ -26,7 +26,7 @@ class ItemPageBar extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF4C53A5),
+                  color: Colors.blueGrey,
                 )),
           ),
           SizedBox(

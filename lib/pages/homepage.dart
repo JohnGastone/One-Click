@@ -1,6 +1,8 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:tunzaaecommerce/pages/cartPage.dart';
+import 'package:tunzaaecommerce/widgets/cartItems.dart';
 import 'package:tunzaaecommerce/widgets/home_bar.dart';
 import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
 
@@ -49,6 +51,7 @@ class HomePage extends StatelessWidget {
           HomeAppBar(),
           Container(
             //height: 650,
+
             padding: EdgeInsets.only(top: 15),
             decoration: BoxDecoration(
                 color: Color(0xFFEDECF2),
@@ -128,7 +131,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Color(0xFFEDECF2),
         //color: Color.fromARGB(255, 158, 164, 168),
         key: _bottomNavigationKey,
-        index: 0,
+        index: index,
         height: 70.0,
         items: [
           CurvedNavigationBarItem(
@@ -144,9 +147,9 @@ class HomePage extends StatelessWidget {
               ),
               label: "Cart"),
           CurvedNavigationBarItem(
-              icon: Icon(Icons.list,
+              icon: Icon(Icons.favorite_outline_outlined,
                   size: 30, color: Color.fromARGB(255, 125, 163, 194)),
-              label: "List"),
+              label: "Favorite"),
           // CurvedNavigationBarItem(
           //     icon: Icon(Icons.call_split, size: 30), label: "Split"),
           // CurvedNavigationBarItem(
@@ -155,8 +158,10 @@ class HomePage extends StatelessWidget {
         //backgroundColor: Colors.grey,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
-        onTap: (index) {
-          setState(() {});
+        onTap: (getSelectedWidget) {
+          setState(() {
+            index = getSelectedWidget;
+          });
         },
         letIndexChange: (index) => true,
       ),
@@ -164,4 +169,20 @@ class HomePage extends StatelessWidget {
   }
 
   void setState(Null Function() param0) {}
+  int index = 0;
+  Widget getSelectedWidget({required int index}) {
+    Widget widget;
+    switch (index) {
+      case 0:
+        widget = HomePage();
+        break;
+      case 1:
+        widget = const cartPage();
+        break;
+      default:
+        widget = HomePage();
+        break;
+    }
+    return widget;
+  }
 }
