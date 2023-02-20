@@ -105,7 +105,11 @@ class HomePage extends StatelessWidget {
                 ),
 
                 //Categories
-                CategoriesWidget(),
+                CategoriesWidget(
+                  // description: '',
+                  // price: 2,
+                  title: 'Gucci',
+                ),
 
                 //Items
                 Container(

@@ -1,18 +1,26 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_import
 import 'package:flutter/material.dart';
-import '../data/data.dart';
+import '../data/data_bestSelling.dart';
+import '../models/items_model.dart';
 
-class Product {
-  final String name;
-  final double price;
+// class Product {
+//   final String name;
+//   final double price;
 
-  Product({required this.name, required this.price});
-}
+//   Product({required this.name, required this.price});
+// }
 
 class CategoriesWidget extends StatelessWidget {
-  CategoriesWidget({super.key});
+  const CategoriesWidget({
+    Key? key,
+    required this.title,
+    // required this.description,
+    // required this.price,
+  }) : super(key: key);
 
-  List<String> varieties = ['High heels', 'Italian Gadgets', 'A4 sized bags'];
+  final String title;
+  // final String description;
+  // final double price;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +46,7 @@ class CategoriesWidget extends StatelessWidget {
                       height: 60,
                     ),
                   Text(
-                    "/$varieties",
+                    title,
                     style: TextStyle(fontSize: 20, color: Colors.grey),
                   )
                 ],
