@@ -33,12 +33,12 @@ class TestScreen extends StatelessWidget {
       imageUrl: 'images/registration.png',
     ),
     Introduction(
-      title: 'Making Order',
+      title: 'Place Order',
       subTitle: 'Browse the menu and order directly from the application.',
       imageUrl: 'images/cart.png',
     ),
     Introduction(
-      title: 'Waiting for delivery',
+      title: 'Wait for delivery',
       subTitle:
           'Your order will be immediately collected, packed and delivered.',
       imageUrl: 'images/waiting.png',
@@ -49,7 +49,7 @@ class TestScreen extends StatelessWidget {
       imageUrl: 'images/deli2.jpg',
     ),
     Introduction(
-      title: 'Delivery',
+      title: 'Receive your order',
       subTitle: 'Receive your order in no time.',
       imageUrl: 'images/deli.jpg',
     ),
