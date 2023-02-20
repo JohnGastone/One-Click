@@ -28,23 +28,24 @@ class MyApp extends StatelessWidget {
 class TestScreen extends StatelessWidget {
   final List<Introduction> list = [
     Introduction(
-      title: 'Buy & Sell',
-      subTitle: 'Browse the menu and order directly from the application',
+      title: 'Register',
+      subTitle: 'Register by filling the required information.',
+      imageUrl: 'images/registration.png',
+    ),
+    Introduction(
+      title: 'Making Order',
+      subTitle: 'Browse the menu and order directly from the application.',
+      imageUrl: 'images/cart.png',
+    ),
+    Introduction(
+      title: 'Waiting for delivery',
+      subTitle:
+          'Your order will be immediately collected, packed and delivered.',
       imageUrl: 'images/deli2.jpg',
     ),
     Introduction(
       title: 'Delivery',
-      subTitle: 'Your order will be immediately collected and',
-      imageUrl: 'images/deli.jpg',
-    ),
-    Introduction(
-      title: 'Receive Money',
-      subTitle: 'Pick up delivery at your door and enjoy groceries',
-      imageUrl: 'images/deli.jpg',
-    ),
-    Introduction(
-      title: 'Finish',
-      subTitle: 'Browse the menu and order directly from the application',
+      subTitle: 'Receive your order in no time.',
       imageUrl: 'images/deli.jpg',
     ),
   ];
@@ -52,6 +53,7 @@ class TestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IntroScreenOnboarding(
+      backgroudColor: Colors.grey,
       introductionList: list,
       onTapSkipButton: () {
         Navigator.push(
