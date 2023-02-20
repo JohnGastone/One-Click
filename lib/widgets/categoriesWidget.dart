@@ -12,6 +12,8 @@ class Product {
 class CategoriesWidget extends StatelessWidget {
   CategoriesWidget({super.key});
 
+  List<String> varieties = ['High heels', 'Italian Gadgets', 'A4 sized bags'];
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -28,14 +30,15 @@ class CategoriesWidget extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    // i variable changes the picture using the created for loop
-                    "images/$i.png",
-                    width: 60,
-                    height: 60,
-                  ),
+                  for (int j = 1; j < 2; j++)
+                    Image.asset(
+                      // i variable changes the picture using the created for loop
+                      "images/$i.png",
+                      width: 60,
+                      height: 60,
+                    ),
                   Text(
-                    "Skonkinko",
+                    "/$varieties",
                     style: TextStyle(fontSize: 20, color: Colors.grey),
                   )
                 ],
