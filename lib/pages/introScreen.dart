@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, file_names
+// ignore_for_file: use_key_in_widget_constructors, file_names, prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:intro_screen_onboarding_flutter/intro_app.dart';
 import 'package:tunzaaecommerce/pages/homepage.dart';
@@ -41,6 +41,11 @@ class TestScreen extends StatelessWidget {
       title: 'Waiting for delivery',
       subTitle:
           'Your order will be immediately collected, packed and delivered.',
+      imageUrl: 'images/waiting.png',
+    ),
+    Introduction(
+      title: '....>>>',
+      subTitle: 'On the run.',
       imageUrl: 'images/deli2.jpg',
     ),
     Introduction(
@@ -53,7 +58,7 @@ class TestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IntroScreenOnboarding(
-      backgroudColor: Colors.grey,
+      backgroudColor: Color.fromARGB(255, 145, 218, 208),
       introductionList: list,
       onTapSkipButton: () {
         Navigator.push(
