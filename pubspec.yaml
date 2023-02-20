@@ -41,6 +41,7 @@ dependencies:
   curved_navigation_bar_with_label: ^2.1.2
   http: ^0.13.5
   flutter_rating_bar: ^4.0.1
+  intro_screen_onboarding_flutter: ^1.0.0
  
   
  

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
-import 'package:tunzaaecommerce/pages/homepage.dart';
+import 'package:tunzaaecommerce/pages/introScreen.dart';
 import 'package:tunzaaecommerce/pages/itemPage.dart';
 
 void main() => runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       routes: {
-        "/": ((context) => HomePage()),
+        "/": ((context) => TestScreen()),
         "cartPage": ((context) => const cartPage()),
         "itemPage": ((context) => ItemPage()),
       },
