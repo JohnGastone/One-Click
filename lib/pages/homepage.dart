@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
-import 'package:tunzaaecommerce/widgets/cartItems.dart';
 import 'package:tunzaaecommerce/widgets/home_bar.dart';
 import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
 
@@ -42,6 +41,20 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+  final TextEditingController _searchController = TextEditingController();
+  List<Product> _products = [];
+
+  List<Product> get _visibleProducts {
+    final searchTerm = _searchController.text;
+    if (searchTerm.isEmpty) {
+      return _products;
+    } else {
+      return _products
+          .where((product) =>
+              product.title.toLowerCase().contains(searchTerm.toLowerCase()))
+          .toList();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +93,7 @@ class HomePage extends StatelessWidget {
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: 'Search Item..'),
+                          controller: _searchController,
                         ),
                       ),
                       Icon(
