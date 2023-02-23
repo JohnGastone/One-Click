@@ -96,7 +96,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       body: ListView(
         controller: _pageController,
-        physics: const NeverScrollableScrollPhysics(),
+        // physics: const NeverScrollableScrollPhysics(),
         children: [
           // To add
           HomeAppBar(),
@@ -183,83 +183,83 @@ class HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      bottomNavigationBar: (bottomBarPages.length <= maxCount)
-          ? AnimatedNotchBottomBar(
-              pageController: _pageController,
-              color: Colors.white,
-              showLabel: false,
-              notchColor: Colors.blueGrey,
-              bottomBarItems: [
-                const BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.home_filled,
-                    color: Colors.blueAccent,
-                  ),
-                  itemLabel: 'Page 1',
-                ),
-                const BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.star,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.star,
-                    color: Colors.blueAccent,
-                  ),
-                  itemLabel: 'Page 2',
-                ),
+      // bottomNavigationBar: (bottomBarPages.length <= maxCount)
+      //     ? AnimatedNotchBottomBar(
+      //         pageController: _pageController,
+      //         color: Colors.white,
+      //         showLabel: false,
+      //         notchColor: Colors.blueGrey,
+      //         bottomBarItems: [
+      //           const BottomBarItem(
+      //             inActiveItem: Icon(
+      //               Icons.home_filled,
+      //               color: Colors.blueGrey,
+      //             ),
+      //             activeItem: Icon(
+      //               Icons.home_filled,
+      //               color: Colors.blueAccent,
+      //             ),
+      //             itemLabel: 'Page 1',
+      //           ),
+      //           const BottomBarItem(
+      //             inActiveItem: Icon(
+      //               Icons.star,
+      //               color: Colors.blueGrey,
+      //             ),
+      //             activeItem: Icon(
+      //               Icons.star,
+      //               color: Colors.blueAccent,
+      //             ),
+      //             itemLabel: 'Page 2',
+      //           ),
 
-                ///svg example
-                BottomBarItem(
-                  inActiveItem: SvgPicture.asset(
-                    'assets/search_icon.svg',
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: SvgPicture.asset(
-                    'assets/search_icon.svg',
-                    color: Colors.white,
-                  ),
-                  itemLabel: 'Page 3',
-                ),
-                const BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.settings,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.settings,
-                    color: Colors.pink,
-                  ),
-                  itemLabel: 'Page 4',
-                ),
-                const BottomBarItem(
-                  inActiveItem: Icon(
-                    Icons.person,
-                    color: Colors.blueGrey,
-                  ),
-                  activeItem: Icon(
-                    Icons.person,
-                    color: Colors.yellow,
-                  ),
-                  itemLabel: 'Page 5',
-                ),
-              ],
-              onTap: (index) {
-                /// control your animation using page controller
-                _pageController.animateToPage(
-                  index,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeIn,
-                );
-              },
-            )
-          : null,
+      //           ///svg example
+      //           BottomBarItem(
+      //             inActiveItem: SvgPicture.asset(
+      //               'assets/search_icon.svg',
+      //               color: Colors.blueGrey,
+      //             ),
+      //             activeItem: SvgPicture.asset(
+      //               'assets/search_icon.svg',
+      //               color: Colors.white,
+      //             ),
+      //             itemLabel: 'Page 3',
+      //           ),
+      //           const BottomBarItem(
+      //             inActiveItem: Icon(
+      //               Icons.settings,
+      //               color: Colors.blueGrey,
+      //             ),
+      //             activeItem: Icon(
+      //               Icons.settings,
+      //               color: Colors.pink,
+      //             ),
+      //             itemLabel: 'Page 4',
+      //           ),
+      //           const BottomBarItem(
+      //             inActiveItem: Icon(
+      //               Icons.person,
+      //               color: Colors.blueGrey,
+      //             ),
+      //             activeItem: Icon(
+      //               Icons.person,
+      //               color: Colors.yellow,
+      //             ),
+      //             itemLabel: 'Page 5',
+      //           ),
+      //         ],
+      //         onTap: (index) {
+      //           /// control your animation using page controller
+      //           _pageController.animateToPage(
+      //             index,
+      //             duration: const Duration(milliseconds: 500),
+      //             curve: Curves.easeIn,
+      //           );
+      //         },
+      //       )
+      //     : null,
     );
   }
 }
 
-enum _SelectedTab { home, favorite, search, person }
+// enum _SelectedTab { home, favorite, search, person }
