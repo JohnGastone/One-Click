@@ -1,9 +1,14 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names, unused_element
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
+import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
+import 'package:tunzaaecommerce/pages/favorite.dart';
+import 'package:tunzaaecommerce/pages/itemPage.dart';
 import 'package:tunzaaecommerce/widgets/home_bar.dart';
 import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
+import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 
 import '../widgets/categoriesWidget.dart';
 import '../widgets/itemsWidget.dart';
@@ -37,12 +42,38 @@ class Product {
   }
 }
 
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
+class HomePage extends StatefulWidget {
+  @override
+  HomePageState createState() => HomePageState();
+}
 
+class HomePageState extends State<HomePage> {
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   final TextEditingController _searchController = TextEditingController();
+  int _page = 0;
   List<Product> _products = [];
+  final _pageController = PageController(initialPage: 2);
+
+  int maxCount = 5;
+
+  /// widget list
+  final List<Widget> bottomBarPages = [
+    HomePage(),
+    const cartPage(),
+    FavoriteItems(),
+    ItemPage(),
+  ];
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   List<Product> get _visibleProducts {
     final searchTerm = _searchController.text;
@@ -56,11 +87,18 @@ class HomePage extends StatelessWidget {
     }
   }
 
+  void _handleIndexChanged(int i) {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        controller: _pageController,
+        physics: const NeverScrollableScrollPhysics(),
         children: [
+          // To add
           HomeAppBar(),
           Container(
             //height: 650,
@@ -145,62 +183,83 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color(0xFFEDECF2),
-        //color: Color.fromARGB(255, 158, 164, 168),
-        key: _bottomNavigationKey,
-        index: index,
-        height: 70.0,
-        items: [
-          CurvedNavigationBarItem(
-            icon: Icon(Icons.home,
-                size: 30, color: Color.fromARGB(255, 125, 163, 194)),
-            label: "Home",
-          ),
-          CurvedNavigationBarItem(
-              icon: Icon(
-                Icons.shopping_cart,
-                size: 30,
-                color: Color.fromARGB(255, 125, 163, 194),
-              ),
-              label: "Cart"),
-          CurvedNavigationBarItem(
-              icon: Icon(Icons.favorite_outline_outlined,
-                  size: 30, color: Color.fromARGB(255, 125, 163, 194)),
-              label: "Favorite"),
-          // CurvedNavigationBarItem(
-          //     icon: Icon(Icons.call_split, size: 30), label: "Split"),
-          // CurvedNavigationBarItem(
-          //     icon: Icon(Icons.perm_identity, size: 30), label: "User"),
-        ],
-        //backgroundColor: Colors.grey,
-        animationCurve: Curves.easeInOut,
-        animationDuration: Duration(milliseconds: 600),
-        onTap: (getSelectedWidget) {
-          setState(() {
-            index = getSelectedWidget;
-          });
-        },
-        letIndexChange: (index) => true,
-      ),
+      bottomNavigationBar: (bottomBarPages.length <= maxCount)
+          ? AnimatedNotchBottomBar(
+              pageController: _pageController,
+              color: Colors.white,
+              showLabel: false,
+              notchColor: Colors.blueGrey,
+              bottomBarItems: [
+                const BottomBarItem(
+                  inActiveItem: Icon(
+                    Icons.home_filled,
+                    color: Colors.blueGrey,
+                  ),
+                  activeItem: Icon(
+                    Icons.home_filled,
+                    color: Colors.blueAccent,
+                  ),
+                  itemLabel: 'Page 1',
+                ),
+                const BottomBarItem(
+                  inActiveItem: Icon(
+                    Icons.star,
+                    color: Colors.blueGrey,
+                  ),
+                  activeItem: Icon(
+                    Icons.star,
+                    color: Colors.blueAccent,
+                  ),
+                  itemLabel: 'Page 2',
+                ),
+
+                ///svg example
+                BottomBarItem(
+                  inActiveItem: SvgPicture.asset(
+                    'assets/search_icon.svg',
+                    color: Colors.blueGrey,
+                  ),
+                  activeItem: SvgPicture.asset(
+                    'assets/search_icon.svg',
+                    color: Colors.white,
+                  ),
+                  itemLabel: 'Page 3',
+                ),
+                const BottomBarItem(
+                  inActiveItem: Icon(
+                    Icons.settings,
+                    color: Colors.blueGrey,
+                  ),
+                  activeItem: Icon(
+                    Icons.settings,
+                    color: Colors.pink,
+                  ),
+                  itemLabel: 'Page 4',
+                ),
+                const BottomBarItem(
+                  inActiveItem: Icon(
+                    Icons.person,
+                    color: Colors.blueGrey,
+                  ),
+                  activeItem: Icon(
+                    Icons.person,
+                    color: Colors.yellow,
+                  ),
+                  itemLabel: 'Page 5',
+                ),
+              ],
+              onTap: (index) {
+                /// control your animation using page controller
+                _pageController.animateToPage(
+                  index,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeIn,
+                );
+              },
+            )
+          : null,
     );
   }
-
-  void setState(Null Function() param0) {}
-  int index = 0;
-  Widget getSelectedWidget({required int index}) {
-    Widget widget;
-    switch (index) {
-      case 0:
-        widget = HomePage();
-        break;
-      case 1:
-        widget = const cartPage();
-        break;
-      default:
-        widget = HomePage();
-        break;
-    }
-    return widget;
-  }
 }
+
+enum _SelectedTab { home, favorite, search, person }

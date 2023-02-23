@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
+import 'package:tunzaaecommerce/pages/favorite.dart';
 import 'package:tunzaaecommerce/pages/introScreen.dart';
 import 'package:tunzaaecommerce/pages/itemPage.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         "/": ((context) => TestScreen()),
         "cartPage": ((context) => const cartPage()),
         "itemPage": ((context) => ItemPage()),
+        "favoritePage": ((context) => FavoriteItems())
       },
     );
   }
