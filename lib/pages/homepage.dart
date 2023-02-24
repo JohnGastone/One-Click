@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names, unused_element, prefer_const_literals_to_create_immutables, unused_field, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names, unused_element, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -97,10 +97,10 @@ class HomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
   static List<Widget> _widgetOptions = <Widget>[
+    ItemsWidget(),
     HomePage(),
     cartPage(),
-    ItemPage(),
-    HomePage()
+    HomePage(),
   ];
 
   @override
@@ -232,8 +232,8 @@ class HomePageState extends State<HomePage> {
                   text: 'Favorite',
                 ),
                 GButton(
-                  icon: CupertinoIcons.search,
-                  text: 'Search',
+                  icon: CupertinoIcons.cart_fill,
+                  text: 'Cart',
                 ),
                 GButton(
                   icon: CupertinoIcons.person_alt,
