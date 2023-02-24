@@ -220,8 +220,8 @@ class HomePageState extends State<HomePage> {
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.grey[100]!,
-              color: Colors.black,
+              tabBackgroundColor: Color.fromARGB(255, 163, 155, 155),
+              color: Color(0xFF4C53A5),
               tabs: [
                 GButton(
                   icon: CupertinoIcons.home,
