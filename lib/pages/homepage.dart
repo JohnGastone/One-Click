@@ -216,7 +216,7 @@ class HomePageState extends State<HomePage> {
               rippleColor: Colors.grey[300]!,
               hoverColor: Colors.grey[100]!,
               gap: 8,
-              activeColor: Colors.black,
+              activeColor: Color.fromARGB(255, 235, 130, 130),
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
@@ -229,7 +229,7 @@ class HomePageState extends State<HomePage> {
                 ),
                 GButton(
                   icon: CupertinoIcons.heart,
-                  text: 'Favorite',
+                  text: 'Favorites',
                 ),
                 GButton(
                   icon: CupertinoIcons.cart_fill,
