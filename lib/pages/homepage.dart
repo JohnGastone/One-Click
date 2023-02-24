@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names, unused_element
+// ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names, unused_element, prefer_const_literals_to_create_immutables, unused_field, use_key_in_widget_constructors
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
@@ -9,6 +10,7 @@ import 'package:tunzaaecommerce/pages/itemPage.dart';
 import 'package:tunzaaecommerce/widgets/home_bar.dart';
 import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../widgets/categoriesWidget.dart';
 import '../widgets/itemsWidget.dart';
@@ -53,6 +55,7 @@ class HomePageState extends State<HomePage> {
   int _page = 0;
   List<Product> _products = [];
   final _pageController = PageController(initialPage: 2);
+  int _selectedIndex = 0;
 
   int maxCount = 5;
 
@@ -91,6 +94,15 @@ class HomePageState extends State<HomePage> {
     setState(() {});
   }
 
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
+  static List<Widget> _widgetOptions = <Widget>[
+    HomePage(),
+    cartPage(),
+    ItemPage(),
+    HomePage()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,6 +110,10 @@ class HomePageState extends State<HomePage> {
         controller: _pageController,
         // physics: const NeverScrollableScrollPhysics(),
         children: [
+          Padding(
+            padding: EdgeInsets.zero,
+            child: _widgetOptions.elementAt(_selectedIndex),
+          ),
           // To add
           HomeAppBar(),
           Container(
@@ -182,6 +198,57 @@ class HomePageState extends State<HomePage> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 20,
+              color: Colors.black.withOpacity(.1),
+            )
+          ],
+        ),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+            child: GNav(
+              rippleColor: Colors.grey[300]!,
+              hoverColor: Colors.grey[100]!,
+              gap: 8,
+              activeColor: Colors.black,
+              iconSize: 24,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              duration: Duration(milliseconds: 400),
+              tabBackgroundColor: Colors.grey[100]!,
+              color: Colors.black,
+              tabs: [
+                GButton(
+                  icon: CupertinoIcons.home,
+                  text: 'Home',
+                ),
+                GButton(
+                  icon: CupertinoIcons.heart,
+                  text: 'Favorite',
+                ),
+                GButton(
+                  icon: CupertinoIcons.search,
+                  text: 'Search',
+                ),
+                GButton(
+                  icon: CupertinoIcons.person_alt,
+                  text: 'Profile',
+                ),
+              ],
+              selectedIndex: _selectedIndex,
+              onTabChange: (index) {
+                setState(() {
+                  _selectedIndex = index;
+                });
+              },
+            ),
+          ),
+        ),
       ),
       // bottomNavigationBar: (bottomBarPages.length <= maxCount)
       //     ? AnimatedNotchBottomBar(
