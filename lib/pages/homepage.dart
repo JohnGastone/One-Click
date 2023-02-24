@@ -59,7 +59,7 @@ class HomePageState extends State<HomePage> {
 
   int maxCount = 5;
 
-  /// widget list
+  /// widget list for notch bar
   final List<Widget> bottomBarPages = [
     HomePage(),
     const cartPage(),
@@ -97,10 +97,22 @@ class HomePageState extends State<HomePage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
   static List<Widget> _widgetOptions = <Widget>[
-    ItemsWidget(),
-    HomePage(),
-    cartPage(),
-    HomePage(),
+    Text(
+      '',
+      style: optionStyle,
+    ),
+    Text(
+      '',
+      style: optionStyle,
+    ),
+    Text(
+      '',
+      style: optionStyle,
+    ),
+    Text(
+      '',
+      style: optionStyle,
+    ),
   ];
 
   @override
@@ -110,8 +122,7 @@ class HomePageState extends State<HomePage> {
         controller: _pageController,
         // physics: const NeverScrollableScrollPhysics(),
         children: [
-          Padding(
-            padding: EdgeInsets.zero,
+          Center(
             child: _widgetOptions.elementAt(_selectedIndex),
           ),
           // To add
@@ -220,7 +231,7 @@ class HomePageState extends State<HomePage> {
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Color.fromARGB(255, 163, 155, 155),
+              tabBackgroundColor: Color.fromARGB(255, 194, 187, 187),
               color: Color(0xFF4C53A5),
               tabs: [
                 GButton(
