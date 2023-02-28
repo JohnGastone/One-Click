@@ -22,7 +22,7 @@ class HomeAppBar extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text(
-              "John's Shop",
+              "Kwetu Shop",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
