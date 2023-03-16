@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -41,7 +43,7 @@ class _NotchBarState extends State<NotchBar> {
   final List<Widget> bottomBarPages = [
     HomePage(),
     const cartPage(),
-    FavoriteItems(),
+    const FavoriteItems(),
     ItemPage(),
   ];
 
