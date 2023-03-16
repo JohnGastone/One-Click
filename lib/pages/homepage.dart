@@ -2,14 +2,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
-import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:tunzaaecommerce/pages/favorite.dart';
 import 'package:tunzaaecommerce/pages/itemPage.dart';
 import 'package:tunzaaecommerce/widgets/home_bar.dart';
 import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
-import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../widgets/categoriesWidget.dart';
