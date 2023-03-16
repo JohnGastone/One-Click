@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 
 class ItemPageBar extends StatelessWidget {
+  const ItemPageBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
