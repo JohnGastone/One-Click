@@ -45,7 +45,7 @@ class cartPage extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10),
                             child: Text(
-                              'Add Coupon Code',
+                              'Add A Gift Card',
                               style: TextStyle(
                                   color: Color(0xFF4C53A5),
                                   fontWeight: FontWeight.bold),
