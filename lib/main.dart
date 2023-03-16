@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         "/": ((context) => TestScreen()),
         "cartPage": ((context) => const cartPage()),
         "itemPage": ((context) => ItemPage()),
-        "favoritePage": ((context) => FavoriteItems())
+        "favoritePage": ((context) => const FavoriteItems())
       },
     );
   }
