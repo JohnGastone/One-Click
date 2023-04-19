@@ -22,7 +22,7 @@ class CartItems extends StatelessWidget {
                 Radio(
                   value: "",
                   groupValue: "",
-                  activeColor: const Color(0xFF4C53A5),
+                  activeColor: Color.fromARGB(255, 126, 132, 199),
                   onChanged: (String? value) {},
                 ),
                 Container(

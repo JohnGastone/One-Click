@@ -21,7 +21,7 @@ class cartAppBar extends StatelessWidget {
               ));
             },
             child: const Icon(
-              Icons.arrow_back,
+              Icons.arrow_back_ios_new,
               size: 30,
             ),
           ),
@@ -36,10 +36,18 @@ class cartAppBar extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          const Icon(
-            Icons.more_vert,
-            size: 30,
-          )
+          InkWell(
+            onTap: () {
+              // Navigator.pop(context);
+              // Navigator.of(context).push(MaterialPageRoute(
+              //   builder: (context) => HomePage(),
+              //));
+            },
+            child: const Icon(
+              Icons.more_vert,
+              size: 30,
+            ),
+          ),
         ],
       ),
     );
