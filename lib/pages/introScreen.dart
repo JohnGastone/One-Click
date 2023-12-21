@@ -70,7 +70,7 @@ class TestScreen extends StatelessWidget {
       subTitle: 'On the run.',
       subTitleTextStyle: TextStyle(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
-      imageUrl: 'images/deli2.jpg',
+      imageUrl: 'images/deli2-removebg-preview.png',
     ),
     Introduction(
       title: 'Receive your order.',
@@ -81,7 +81,7 @@ class TestScreen extends StatelessWidget {
       subTitle: 'Receive your order in no time.',
       subTitleTextStyle: TextStyle(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
-      imageUrl: 'images/deli.jpg',
+      imageUrl: 'images/deli-removebg-preview.png',
     ),
   ];
 
