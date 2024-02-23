@@ -2,6 +2,7 @@
 
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -23,7 +24,7 @@ class HomeAppBar extends StatelessWidget {
             padding: EdgeInsets.only(left: 20),
             child: Text(
               "Kwetu Shop",
-              style: TextStyle(
+              style: GoogleFonts.spaceMono(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Color(0xFF4C53A5),
@@ -34,7 +35,7 @@ class HomeAppBar extends StatelessWidget {
           Badge(
             badgeContent: Text(
               "4",
-              style: TextStyle(color: Colors.white),
+              style: GoogleFonts.spaceMono(color: Colors.white),
             ),
             badgeStyle: BadgeStyle(badgeColor: Colors.grey),
             child: InkWell(

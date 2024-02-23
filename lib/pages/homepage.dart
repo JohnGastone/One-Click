@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
 import 'package:tunzaaecommerce/pages/favorite.dart';
 import 'package:tunzaaecommerce/pages/itemPage.dart';
@@ -154,7 +155,8 @@ class HomePageState extends State<HomePage> {
                         child: TextFormField(
                           decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Search Item..'),
+                              hintText: 'Search Item..',
+                              hintStyle: GoogleFonts.spaceMono()),
                           controller: _searchController,
                         ),
                       ),
