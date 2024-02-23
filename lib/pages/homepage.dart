@@ -195,7 +195,7 @@ class HomePageState extends State<HomePage> {
                   margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                   child: Text(
                     "Best Selling",
-                    style: TextStyle(
+                    style: GoogleFonts.spaceMono(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF4C53A5),
