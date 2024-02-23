@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:intro_screen_onboarding_flutter/intro_app.dart';
 import 'package:tunzaaecommerce/pages/homepage.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +31,7 @@ class TestScreen extends StatelessWidget {
   final List<Introduction> list = [
     Introduction(
       title: 'Register.',
-      titleTextStyle: TextStyle(
+      titleTextStyle: GoogleFonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
