@@ -4,7 +4,6 @@ import 'package:intro_screen_onboarding_flutter/intro_app.dart';
 import 'package:tunzaaecommerce/pages/homepage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -31,57 +30,57 @@ class TestScreen extends StatelessWidget {
   final List<Introduction> list = [
     Introduction(
       title: 'Register.',
-      titleTextstyle.spaceMono: GoogleFonts.spaceMono(
+      titleTextStyle: GoogleFonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle: 'Register by filling the required information.',
-      subTitleTextStyle: Googlefonts.spaceMono(
+      subTitleTextStyle: GoogleFonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/registration.png',
     ),
     Introduction(
       title: 'Place Order.',
-      titleTextStyle: Googlefonts.spaceMono(
+      titleTextStyle: GoogleFonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle: 'Browse the menu and order directly from the application.',
-      subTitleTextStyle: Googlefonts.spaceMono(
+      subTitleTextStyle: GoogleFonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/cart.png',
     ),
     Introduction(
       title: 'Wait for delivery.',
-      titleTextStyle: Googlefonts.spaceMono(
+      titleTextStyle: GoogleFonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle:
           'Your order will be immediately collected, packed and delivered.',
-      subTitleTextStyle: Googlefonts.spaceMono(
+      subTitleTextStyle: GoogleFonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/waiting.png',
     ),
     Introduction(
       title: '....>>>',
-      titleTextStyle: Googlefonts.spaceMono(
+      titleTextStyle: GoogleFonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle: 'On the run.',
-      subTitleTextStyle: Googlefonts.spaceMono(
+      subTitleTextStyle: GoogleFonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/deli2-removebg-preview.png',
     ),
     Introduction(
       title: 'Receive your order.',
-      titleTextStyle: Googlefonts.spaceMono(
+      titleTextStyle: GoogleFonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle: 'Receive your order in no time.',
-      subTitleTextStyle: Googlefonts.spaceMono(
+      subTitleTextStyle: GoogleFonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/deli-removebg-preview.png',
     ),
