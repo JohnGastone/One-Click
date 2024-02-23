@@ -63,7 +63,7 @@ class ItemsWidget extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Product Title",
-                  style: TextStyle(
+                  style: GoogleFonts.spaceMono(
                       fontSize: 15,
                       color: const Color(0xFF4C53A5),
                       fontWeight: FontWeight.w500),
@@ -73,7 +73,7 @@ class ItemsWidget extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Write product's description",
-                  style: TextStyle(
+                  style: GoogleFonts.spaceMono(
                       fontSize: 12,
                       color: const Color(0xFF4C53A5),
                       fontWeight: FontWeight.w300),
