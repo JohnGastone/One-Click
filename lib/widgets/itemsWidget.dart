@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ItemsWidget extends StatelessWidget {
   const ItemsWidget({super.key});
@@ -30,9 +31,9 @@ class ItemsWidget extends StatelessWidget {
                       color: const Color(0xFF4C53A5),
                       borderRadius: BorderRadius.circular(30),
                     ),
-                    child: const Text(
+                    child: Text(
                       "-50%",
-                      style: TextStyle(
+                      style: GoogleFonts.spaceMono(
                           color: Colors.white,
                           fontSize: 14,
                           fontWeight: FontWeight.bold),
