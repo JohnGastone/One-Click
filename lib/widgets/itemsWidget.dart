@@ -17,6 +17,8 @@ class ItemsWidget extends StatelessWidget {
       children: [
         for (int i = 1; i < 9; i++)
           Container(
+            height: 310,
+            width: 210,
             padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
             decoration: BoxDecoration(
