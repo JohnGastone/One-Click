@@ -101,7 +101,7 @@ class ItemsWidget extends StatelessWidget {
                               0xFF4C53A5,
                             ))
                       ]),
-                )
+                ),
               ]),
             ),
           ),

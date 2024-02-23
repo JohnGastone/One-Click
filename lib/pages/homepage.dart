@@ -251,7 +251,7 @@ class HomePageState extends State<HomePage> {
                 GButton(
                   icon: CupertinoIcons.person_alt,
                   text: 'Profile',
-                  textStyle: GoogleFonts.spaceMono(),
+                  textStyle: GoogleFonts.spaceMono(fontSize: 12),
                 ),
               ],
               selectedIndex: _selectedIndex,
