@@ -31,7 +31,7 @@ class TestScreen extends StatelessWidget {
   final List<Introduction> list = [
     Introduction(
       title: 'Register.',
-      titleTextStyle: GoogleFonts.spaceMono(
+      titleGooglefonts.spaceMono: GoogleFonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
