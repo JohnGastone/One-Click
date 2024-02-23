@@ -42,46 +42,46 @@ class TestScreen extends StatelessWidget {
     ),
     Introduction(
       title: 'Place Order.',
-      titleTextStyle: TextStyle(
+      titleTextStyle: Googlefonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle: 'Browse the menu and order directly from the application.',
-      subTitleTextStyle: TextStyle(
+      subTitleTextStyle: Googlefonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/cart.png',
     ),
     Introduction(
       title: 'Wait for delivery.',
-      titleTextStyle: TextStyle(
+      titleTextStyle: Googlefonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle:
           'Your order will be immediately collected, packed and delivered.',
-      subTitleTextStyle: TextStyle(
+      subTitleTextStyle: Googlefonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/waiting.png',
     ),
     Introduction(
       title: '....>>>',
-      titleTextStyle: TextStyle(
+      titleTextStyle: Googlefonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle: 'On the run.',
-      subTitleTextStyle: TextStyle(
+      subTitleTextStyle: Googlefonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/deli2-removebg-preview.png',
     ),
     Introduction(
       title: 'Receive your order.',
-      titleTextStyle: TextStyle(
+      titleTextStyle: Googlefonts.spaceMono(
           fontSize: 28,
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle: 'Receive your order in no time.',
-      subTitleTextStyle: TextStyle(
+      subTitleTextStyle: Googlefonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/deli-removebg-preview.png',
     ),
