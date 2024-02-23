@@ -85,10 +85,10 @@ class ItemsWidget extends StatelessWidget {
                 ),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         "\$ 50",
-                        style: TextStyle(
+                        style: GoogleFonts.spaceMono(
                             fontSize: 13,
                             color: Color(0xFF4C53A5),
                             fontWeight: FontWeight.w500),
