@@ -36,7 +36,7 @@ class TestScreen extends StatelessWidget {
           color: Color.fromARGB(255, 92, 120, 134),
           fontWeight: FontWeight.bold),
       subTitle: 'Register by filling the required information.',
-      subTitleTextStyle: TextStyle(
+      subTitleTextStyle: Googlefonts.spaceMono(
           color: Colors.black54, fontWeight: FontWeight.w500, fontSize: 18),
       imageUrl: 'images/registration.png',
     ),
