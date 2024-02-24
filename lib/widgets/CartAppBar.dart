@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, file_names
+// ignore_for_file: camel_case_types, file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,7 +26,7 @@ class cartAppBar extends StatelessWidget {
               size: 30,
             ),
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text(
               "Cart",
