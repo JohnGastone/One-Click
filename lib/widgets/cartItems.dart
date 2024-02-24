@@ -30,7 +30,12 @@ class CartItems extends StatelessWidget {
                   height: 65,
                   width: 65,
                   margin: const EdgeInsets.only(right: 15),
-                  child: Image.asset('images/$i.png'),
+                  child: InkWell(
+                    child: Image.asset('images/$i.png'),
+                    onTap: () {
+                      Navigator.pushNamed(context, 'itemPage');
+                    },
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
