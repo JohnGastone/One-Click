@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unused_import, file_names
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../data/data_bestSelling.dart';
 import '../models/items_model.dart';
 
@@ -47,7 +48,8 @@ class CategoriesWidget extends StatelessWidget {
                     ),
                   Text(
                     title,
-                    style: TextStyle(fontSize: 20, color: Colors.grey),
+                    style:
+                        GoogleFonts.spaceMono(fontSize: 20, color: Colors.grey),
                   )
                 ],
               ),
