@@ -236,17 +236,17 @@ class HomePageState extends State<HomePage> {
                 GButton(
                   icon: CupertinoIcons.home,
                   text: 'Home',
-                  textStyle: GoogleFonts.spaceMono(),
+                  textStyle: GoogleFonts.spaceMono(fontSize: 12),
                 ),
                 GButton(
                   icon: CupertinoIcons.heart,
                   text: 'Favorites',
-                  textStyle: GoogleFonts.spaceMono(),
+                  textStyle: GoogleFonts.spaceMono(fontSize: 12),
                 ),
                 GButton(
                   icon: CupertinoIcons.cart_fill,
                   text: 'Cart',
-                  textStyle: GoogleFonts.spaceMono(),
+                  textStyle: GoogleFonts.spaceMono(fontSize: 12),
                 ),
                 GButton(
                   icon: CupertinoIcons.person_alt,

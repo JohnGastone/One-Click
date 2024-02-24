@@ -56,8 +56,8 @@ class ItemsWidget extends StatelessWidget {
                     margin: EdgeInsets.all(20),
                     child: Image.asset(
                       "images/$i.png",
-                      height: 80,
-                      width: 80,
+                      height: 60,
+                      width: 60,
                     ),
                   ),
                 ),
@@ -67,7 +67,7 @@ class ItemsWidget extends StatelessWidget {
                   child: Text(
                     "Product Title",
                     style: GoogleFonts.spaceMono(
-                        fontSize: 15,
+                        fontSize: 18,
                         color: const Color(0xFF4C53A5),
                         fontWeight: FontWeight.w500),
                   ),
