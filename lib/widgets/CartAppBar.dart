@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tunzaaecommerce/pages/homepage.dart';
 
 class cartAppBar extends StatelessWidget {
@@ -29,7 +30,7 @@ class cartAppBar extends StatelessWidget {
             padding: EdgeInsets.only(left: 20),
             child: Text(
               "Cart",
-              style: TextStyle(
+              style: GoogleFonts.spaceMono(
                   fontSize: 23,
                   fontWeight: FontWeight.bold,
                   color: Color(0xFF4C53A5)),

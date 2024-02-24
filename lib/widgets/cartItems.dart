@@ -27,8 +27,8 @@ class CartItems extends StatelessWidget {
                   onChanged: (String? value) {},
                 ),
                 Container(
-                  height: 70,
-                  width: 70,
+                  height: 65,
+                  width: 65,
                   margin: const EdgeInsets.only(right: 15),
                   child: Image.asset('images/$i.png'),
                 ),
@@ -41,7 +41,7 @@ class CartItems extends StatelessWidget {
                       Text(
                         "Product Title",
                         style: GoogleFonts.spaceMono(
-                            fontSize: 20,
+                            fontSize: 17,
                             fontWeight: FontWeight.w600,
                             color: Color(0xFF4C53A5)),
                       ),
