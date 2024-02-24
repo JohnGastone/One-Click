@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CartItems extends StatelessWidget {
   const CartItems({super.key});
@@ -37,16 +38,16 @@ class CartItems extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "Product Title",
-                        style: TextStyle(
+                        style: GoogleFonts.spaceMono(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
                             color: Color(0xFF4C53A5)),
                       ),
-                      const Text(
+                      Text(
                         "\$ 50",
-                        style: TextStyle(
+                        style: GoogleFonts.spaceMono(
                             fontSize: 13, fontWeight: FontWeight.w400),
                       )
                     ],
@@ -87,7 +88,7 @@ class CartItems extends StatelessWidget {
                             margin: EdgeInsets.symmetric(horizontal: 1),
                             child: Text(
                               '01',
-                              style: TextStyle(
+                              style: GoogleFonts.spaceMono(
                                   fontSize: 14,
                                   color: Colors.white60,
                                   fontWeight: FontWeight.w600),
