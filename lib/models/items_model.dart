@@ -10,18 +10,10 @@ class Item {
     required this.price,
     required this.discount,
   });
+}
 
-  final List<Item> items = [
-    Item(
-        title: "Gucci Shoe",
-        description: "A shoe worn by Bibi Titi Mohamed",
-        price: 67,
-        discount: "10"),
-    Item(
-        title: "Gucci kiatu",
-        description: "A shoe worn by Bibi Titi Mohamed",
-        price: 67,
-        discount: "10"),
+class ItemList {
+  static List<Item> items = [
     Item(
         title: "Gucci Shoe",
         description: "A shoe worn by Bibi Titi Mohamed",
@@ -30,32 +22,48 @@ class Item {
     Item(
         title: "Gucci Shoe",
         description: "A shoe worn by Bibi Titi Mohamed",
+        price: 60,
+        discount: "10"),
+    Item(
+        title: "Vuitton Watch",
+        description: "A classy watch to fit your worth",
+        price: 45,
+        discount: "10"),
+    Item(
+        title: "Laptop bag",
+        description: "Portable bag for your Laptop",
+        price: 50,
+        discount: "10"),
+    Item(
+        title: "Safari bag",
+        description: "We got you covered with this travel bag",
+        price: 67,
+        discount: "10"),
+    Item(
+        title: "Hand bag",
+        description: "Classic girls gather here for this one",
+        price: 70,
+        discount: "10"),
+    Item(
+        title: "Skonkinko",
+        description: "A shoe worn by Mama Kilakshal",
+        price: 80,
+        discount: "10"),
+    Item(
+        title: "Lexus watch",
+        description: "Watch your watch as special as it is",
+        price: 67,
+        discount: "10"),
+    Item(
+        title: "Anything else",
+        description: "These are just few of many things",
         price: 67,
         discount: "10"),
     Item(
         title: "Gucci Shoe",
         description: "A shoe worn by Bibi Titi Mohamed",
-        price: 67,
-        discount: "10"),
-    Item(
-        title: "Gucci Shoe",
-        description: "A shoe worn by Bibi Titi Mohamed",
-        price: 67,
-        discount: "10"),
-    Item(
-        title: "Gucci Shoe",
-        description: "A shoe worn by Bibi Titi Mohamed",
-        price: 67,
-        discount: "10"),
-    Item(
-        title: "Gucci Shoe",
-        description: "A shoe worn by Bibi Titi Mohamed",
-        price: 67,
-        discount: "10"),
-    Item(
-        title: "Gucci Shoe",
-        description: "A shoe worn by Bibi Titi Mohamed",
-        price: 67,
+        price: 56,
         discount: "10"),
   ];
+  static List<Item> displayList = List.from(items);
 }

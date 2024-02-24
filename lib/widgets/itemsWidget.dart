@@ -2,10 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tunzaaecommerce/models/items_model.dart';
 
 class ItemsWidget extends StatelessWidget {
-  const ItemsWidget({super.key});
+  ItemsWidget({super.key});
 
+  List<Item> displayList = List.from(ItemList.displayList);
   @override
   Widget build(BuildContext context) {
     return GridView.count(
@@ -65,7 +67,7 @@ class ItemsWidget extends StatelessWidget {
                   padding: EdgeInsets.only(bottom: 8),
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Product Title",
+                    displayList[i].title,
                     style: GoogleFonts.spaceMono(
                         fontSize: 18,
                         color: const Color(0xFF4C53A5),
@@ -75,7 +77,7 @@ class ItemsWidget extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Write product's description",
+                    displayList[i].description,
                     style: GoogleFonts.spaceMono(
                         fontSize: 12,
                         color: const Color(0xFF4C53A5),
@@ -90,7 +92,7 @@ class ItemsWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "\$ 50",
+                          '${displayList[i].price}',
                           style: GoogleFonts.spaceMono(
                               fontSize: 13,
                               color: Color(0xFF4C53A5),

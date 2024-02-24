@@ -1,7 +1,9 @@
-// ignore_for_file: prefer_const_constructors, unused_import, file_names
+// ignore_for_file: prefer_const_constructors, unused_import, file_names, must_be_immutable
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../data/data_bestSelling.dart';
+import '../models/categories_model.dart';
 import '../models/items_model.dart';
 
 // class Product {
@@ -12,7 +14,7 @@ import '../models/items_model.dart';
 // }
 
 class CategoriesWidget extends StatelessWidget {
-  const CategoriesWidget({
+  CategoriesWidget({
     Key? key,
     required this.title,
     // required this.description,
@@ -22,6 +24,7 @@ class CategoriesWidget extends StatelessWidget {
   final String title;
   // final String description;
   // final double price;
+  List<Category1> displayCategories = List.from(CategoryList.displayCategories);
 
   @override
   Widget build(BuildContext context) {

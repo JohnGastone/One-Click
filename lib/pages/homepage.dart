@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tunzaaecommerce/models/items_model.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
 import 'package:tunzaaecommerce/pages/favorite.dart';
 import 'package:tunzaaecommerce/pages/itemPage.dart';
@@ -13,35 +14,6 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import '../widgets/categoriesWidget.dart';
 import '../widgets/itemsWidget.dart';
 
-class Product {
-  final int id;
-  final String title;
-  final double price;
-  final String description;
-  final String category;
-  final String image;
-
-  Product({
-    required this.id,
-    required this.title,
-    required this.price,
-    required this.description,
-    required this.category,
-    required this.image,
-  });
-
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return Product(
-      id: json['id'],
-      title: json['title'],
-      price: json['price'].toDouble(),
-      description: json['description'],
-      category: json['category'],
-      image: json['image'],
-    );
-  }
-}
-
 class HomePage extends StatefulWidget {
   @override
   HomePageState createState() => HomePageState();
@@ -51,7 +23,7 @@ class HomePageState extends State<HomePage> {
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   final TextEditingController _searchController = TextEditingController();
   int _page = 0;
-  List<Product> _products = [];
+//List<Product> _products = [];
   final _pageController = PageController(initialPage: 2);
   int _selectedIndex = 0;
 
@@ -65,53 +37,17 @@ class HomePageState extends State<HomePage> {
     ItemPage(),
   ];
 
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
-  }
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  List<Product> get _visibleProducts {
-    final searchTerm = _searchController.text;
-    if (searchTerm.isEmpty) {
-      return _products;
-    } else {
-      return _products
-          .where((product) =>
-              product.title.toLowerCase().contains(searchTerm.toLowerCase()))
+  void updateList(String value) {
+    // We will filter our list of movies here
+    setState(() {
+      displayList = ItemList.items
+          .where((element) =>
+              element.title.toLowerCase().contains(value.toLowerCase()))
           .toList();
-    }
+    });
   }
 
-  void _handleIndexChanged(int i) {
-    setState(() {});
-  }
-
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static List<Widget> _widgetOptions = <Widget>[
-    Text(
-      '',
-      style: optionStyle,
-    ),
-    Text(
-      '',
-      style: optionStyle,
-    ),
-    Text(
-      '',
-      style: optionStyle,
-    ),
-    Text(
-      '',
-      style: optionStyle,
-    ),
-  ];
+  List<Item> displayList = List.from(ItemList.displayList);
 
   @override
   Widget build(BuildContext context) {
@@ -120,9 +56,6 @@ class HomePageState extends State<HomePage> {
         controller: _pageController,
         // physics: const NeverScrollableScrollPhysics(),
         children: [
-          Center(
-            child: _widgetOptions.elementAt(_selectedIndex),
-          ),
           // To add
           HomeAppBar(),
           Container(
@@ -264,83 +197,6 @@ class HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      // bottomNavigationBar: (bottomBarPages.length <= maxCount)
-      //     ? AnimatedNotchBottomBar(
-      //         pageController: _pageController,
-      //         color: Colors.white,
-      //         showLabel: false,
-      //         notchColor: Colors.blueGrey,
-      //         bottomBarItems: [
-      //           const BottomBarItem(
-      //             inActiveItem: Icon(
-      //               Icons.home_filled,
-      //               color: Colors.blueGrey,
-      //             ),
-      //             activeItem: Icon(
-      //               Icons.home_filled,
-      //               color: Colors.blueAccent,
-      //             ),
-      //             itemLabel: 'Page 1',
-      //           ),
-      //           const BottomBarItem(
-      //             inActiveItem: Icon(
-      //               Icons.star,
-      //               color: Colors.blueGrey,
-      //             ),
-      //             activeItem: Icon(
-      //               Icons.star,
-      //               color: Colors.blueAccent,
-      //             ),
-      //             itemLabel: 'Page 2',
-      //           ),
-
-      //           ///svg example
-      //           BottomBarItem(
-      //             inActiveItem: SvgPicture.asset(
-      //               'assets/search_icon.svg',
-      //               color: Colors.blueGrey,
-      //             ),
-      //             activeItem: SvgPicture.asset(
-      //               'assets/search_icon.svg',
-      //               color: Colors.white,
-      //             ),
-      //             itemLabel: 'Page 3',
-      //           ),
-      //           const BottomBarItem(
-      //             inActiveItem: Icon(
-      //               Icons.settings,
-      //               color: Colors.blueGrey,
-      //             ),
-      //             activeItem: Icon(
-      //               Icons.settings,
-      //               color: Colors.pink,
-      //             ),
-      //             itemLabel: 'Page 4',
-      //           ),
-      //           const BottomBarItem(
-      //             inActiveItem: Icon(
-      //               Icons.person,
-      //               color: Colors.blueGrey,
-      //             ),
-      //             activeItem: Icon(
-      //               Icons.person,
-      //               color: Colors.yellow,
-      //             ),
-      //             itemLabel: 'Page 5',
-      //           ),
-      //         ],
-      //         onTap: (index) {
-      //           /// control your animation using page controller
-      //           _pageController.animateToPage(
-      //             index,
-      //             duration: const Duration(milliseconds: 500),
-      //             curve: Curves.easeIn,
-      //           );
-      //         },
-      //       )
-      //     : null,
     );
   }
 }
-
-// enum _SelectedTab { home, favorite, search, person }
