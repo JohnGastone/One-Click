@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CartBottomNavBar extends StatelessWidget {
   const CartBottomNavBar({super.key});
@@ -19,12 +20,12 @@ class CartBottomNavBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Total :',
-                    style: TextStyle(
+                    style: GoogleFonts.spaceMono(
                         color: Color(0xFF4C53A5),
                         fontSize: 22,
                         fontWeight: FontWeight.bold)),
                 Text('\$ 400',
-                    style: TextStyle(
+                    style: GoogleFonts.spaceMono(
                         color: Color(0xFF4C53A5),
                         fontSize: 22,
                         fontWeight: FontWeight.bold))
@@ -39,7 +40,7 @@ class CartBottomNavBar extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20)),
               child: Text(
                 'Check Out',
-                style: TextStyle(
+                style: GoogleFonts.spaceMono(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.bold),

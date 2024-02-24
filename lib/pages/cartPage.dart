@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors, file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/CartAppBar.dart';
 import '../widgets/cartBottomNav.dart';
@@ -46,7 +47,7 @@ class cartPage extends StatelessWidget {
                             padding: EdgeInsets.symmetric(horizontal: 10),
                             child: Text(
                               'Add A Gift Card',
-                              style: TextStyle(
+                              style: GoogleFonts.spaceMono(
                                   color: Color(0xFF4C53A5),
                                   fontWeight: FontWeight.bold),
                             ),
