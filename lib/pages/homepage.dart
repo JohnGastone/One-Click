@@ -60,13 +60,16 @@ class HomePageState extends State<HomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              SizedBox(
+                width: 10,
+              ),
               Icon(
                 Icons.local_mall,
                 size: 30,
                 color: Color(0xFF4C53A5),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: EdgeInsets.only(left: 5),
                 child: Text(
                   "Kwetu Shop",
                   style: GoogleFonts.spaceMono(
@@ -76,7 +79,9 @@ class HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Spacer(),
+              SizedBox(
+                width: 130,
+              ),
               Badge(
                 badgeContent: Text(
                   "4",
