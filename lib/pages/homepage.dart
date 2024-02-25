@@ -54,18 +54,14 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: Size.fromHeight(50),
         child: AppBar(
           backgroundColor: Colors.white,
-          leading: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+          leading: Center(
+            //padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 10,
-                  // height: 30,
-                ),
                 Icon(
                   Icons.local_mall,
                   size: 30,
@@ -78,29 +74,6 @@ class HomePageState extends State<HomePage> {
                     style: GoogleFonts.spaceMono(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF4C53A5),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 130,
-                ),
-                Badge(
-                  badgeContent: Text(
-                    "4",
-                    style: GoogleFonts.spaceMono(color: Colors.white),
-                  ),
-                  badgeStyle: BadgeStyle(badgeColor: Colors.grey),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => cartPage(),
-                      ));
-                    },
-                    child: Icon(
-                      Icons.shopping_cart,
-                      size: 33,
                       color: Color(0xFF4C53A5),
                     ),
                   ),
@@ -160,16 +133,45 @@ class HomePageState extends State<HomePage> {
                 ),
 
                 // Categories Widget
-                Container(
-                  alignment: Alignment.centerLeft,
-                  margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                  child: Text(
-                    "Varieties",
-                    style: GoogleFonts.spaceMono(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF4C53A5),
-                    ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        margin:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                        child: Text(
+                          "Varieties",
+                          style: GoogleFonts.spaceMono(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF4C53A5),
+                          ),
+                        ),
+                      ),
+                      Badge(
+                        badgeContent: Text(
+                          "4",
+                          style: GoogleFonts.spaceMono(color: Colors.white),
+                        ),
+                        badgeStyle: BadgeStyle(badgeColor: Colors.grey),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => cartPage(),
+                            ));
+                          },
+                          child: Icon(
+                            Icons.shopping_cart,
+                            size: 33,
+                            color: Color(0xFF4C53A5),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
 
