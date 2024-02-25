@@ -8,7 +8,7 @@ import 'package:tunzaaecommerce/models/items_model.dart';
 import 'package:tunzaaecommerce/pages/cartPage.dart';
 import 'package:tunzaaecommerce/pages/favorite.dart';
 import 'package:tunzaaecommerce/pages/itemPage.dart';
-import 'package:tunzaaecommerce/widgets/home_bar.dart';
+//import 'package:tunzaaecommerce/widgets/home_bar.dart';
 import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -54,46 +54,51 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Row(
-          children: [
-            Icon(
-              Icons.local_mall,
-              size: 30,
-              color: Color(0xFF4C53A5),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 20),
-              child: Text(
-                "Kwetu Shop",
-                style: GoogleFonts.spaceMono(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF4C53A5),
+        backgroundColor: Colors.white,
+        leading: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Icon(
+                Icons.local_mall,
+                size: 30,
+                color: Color(0xFF4C53A5),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  "Kwetu Shop",
+                  style: GoogleFonts.spaceMono(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF4C53A5),
+                  ),
                 ),
               ),
-            ),
-            Spacer(),
-            Badge(
-              badgeContent: Text(
-                "4",
-                style: GoogleFonts.spaceMono(color: Colors.white),
-              ),
-              badgeStyle: BadgeStyle(badgeColor: Colors.grey),
-              child: InkWell(
-                onTap: () {
-                  Navigator.pop(context);
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => cartPage(),
-                  ));
-                },
-                child: Icon(
-                  Icons.shopping_cart,
-                  size: 33,
-                  color: Color(0xFF4C53A5),
+              Spacer(),
+              Badge(
+                badgeContent: Text(
+                  "4",
+                  style: GoogleFonts.spaceMono(color: Colors.white),
+                ),
+                badgeStyle: BadgeStyle(badgeColor: Colors.grey),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => cartPage(),
+                    ));
+                  },
+                  child: Icon(
+                    Icons.shopping_cart,
+                    size: 33,
+                    color: Color(0xFF4C53A5),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       body: ListView(
