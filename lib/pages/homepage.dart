@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names, unused_element, prefer_const_literals_to_create_immutables, unused_field, use_key_in_widget_constructors
 
+import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,12 +53,55 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: Row(
+          children: [
+            Icon(
+              Icons.local_mall,
+              size: 30,
+              color: Color(0xFF4C53A5),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
+                "Kwetu Shop",
+                style: GoogleFonts.spaceMono(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF4C53A5),
+                ),
+              ),
+            ),
+            Spacer(),
+            Badge(
+              badgeContent: Text(
+                "4",
+                style: GoogleFonts.spaceMono(color: Colors.white),
+              ),
+              badgeStyle: BadgeStyle(badgeColor: Colors.grey),
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => cartPage(),
+                  ));
+                },
+                child: Icon(
+                  Icons.shopping_cart,
+                  size: 33,
+                  color: Color(0xFF4C53A5),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       body: ListView(
         controller: _pageController,
         // physics: const NeverScrollableScrollPhysics(),
         children: [
           // To add
-          HomeAppBar(),
+          // HomeAppBar(),
           Container(
             //height: 650,
 
