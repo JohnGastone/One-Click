@@ -32,37 +32,37 @@ class ItemList {
     Item(
         title: "Laptop bag",
         description: "Portable bag for your Laptop",
-        price: '50',
+        price: 'Tsh 50,000',
         discount: "10"),
     Item(
         title: "Safari bag",
         description: "We got you covered with this travel bag",
-        price: '67',
+        price: 'Tsh 67,000',
         discount: "10"),
     Item(
         title: "Hand bag",
         description: "Classic girls gather here for this one",
-        price: '70',
+        price: 'Tsh 70,000',
         discount: "10"),
     Item(
         title: "Skonkinko",
         description: "A shoe worn by Mama Kilakshal",
-        price: '80',
+        price: 'Tsh 80,000',
         discount: "10"),
     Item(
         title: "Lexus watch",
         description: "Watch your watch as special as it is",
-        price: '67',
+        price: 'Tsh 67,000',
         discount: "10"),
     Item(
         title: "Anything else",
         description: "These are just few of many things",
-        price: '67',
+        price: 'Tsh 67,000',
         discount: "10"),
     Item(
         title: "Gucci Shoe",
         description: "A shoe worn by Bibi Titi Mohamed",
-        price: '56',
+        price: 'Tsh 56,000',
         discount: "10"),
   ];
   static List<Item> displayList = List.from(items);
