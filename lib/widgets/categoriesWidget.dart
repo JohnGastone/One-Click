@@ -49,7 +49,7 @@ class CategoriesWidget extends StatelessWidget {
                       height: 60,
                     ),
                   Text(
-                    displayCategories[i].title,
+                    title,
                     style:
                         GoogleFonts.spaceMono(fontSize: 20, color: Colors.grey),
                   )
