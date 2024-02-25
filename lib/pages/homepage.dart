@@ -58,7 +58,7 @@ class HomePageState extends State<HomePage> {
         child: AppBar(
           backgroundColor: Colors.white,
           leading: Center(
-            //padding: const EdgeInsets.symmetric(horizontal: 15),
+            //adding: const EdgeInsets.only(left: 50),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
