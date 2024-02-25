@@ -92,7 +92,7 @@ class ItemsWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          '${displayList[i].price}',
+                          displayList[i].price,
                           style: GoogleFonts.spaceMono(
                               fontSize: 13,
                               color: Color(0xFF4C53A5),

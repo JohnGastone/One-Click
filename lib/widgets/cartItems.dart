@@ -1,11 +1,14 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, file_names
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, file_names, must_be_immutable
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tunzaaecommerce/models/items_model.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 class CartItems extends StatelessWidget {
-  const CartItems({super.key});
+  CartItems({super.key});
+  List<Item> displayList = List.from(ItemList.displayList);
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +47,7 @@ class CartItems extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Product Title",
+                        displayList[i].title,
                         style: GoogleFonts.spaceMono(
                             fontSize: 17,
                             fontWeight: FontWeight.w600,

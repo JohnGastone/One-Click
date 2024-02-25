@@ -6,46 +6,46 @@ final List<Item> items = [
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
   Item(
       title: "Gucci Shoe",
       description: "A shoe worn by Bibi Titi Mohamed",
-      price: 67,
+      price: '67',
       discount: "10"),
 ];
