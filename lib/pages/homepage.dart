@@ -53,56 +53,60 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                width: 10,
-              ),
-              Icon(
-                Icons.local_mall,
-                size: 30,
-                color: Color(0xFF4C53A5),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 5),
-                child: Text(
-                  "Kwetu Shop",
-                  style: GoogleFonts.spaceMono(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF4C53A5),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100),
+        child: AppBar(
+          backgroundColor: Colors.white,
+          leading: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  width: 10,
+                  height: 30,
+                ),
+                Icon(
+                  Icons.local_mall,
+                  size: 30,
+                  color: Color(0xFF4C53A5),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 5),
+                  child: Text(
+                    "Kwetu Shop",
+                    style: GoogleFonts.spaceMono(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF4C53A5),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 130,
-              ),
-              Badge(
-                badgeContent: Text(
-                  "4",
-                  style: GoogleFonts.spaceMono(color: Colors.white),
+                SizedBox(
+                  width: 130,
                 ),
-                badgeStyle: BadgeStyle(badgeColor: Colors.grey),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => cartPage(),
-                    ));
-                  },
-                  child: Icon(
-                    Icons.shopping_cart,
-                    size: 33,
-                    color: Color(0xFF4C53A5),
+                Badge(
+                  badgeContent: Text(
+                    "4",
+                    style: GoogleFonts.spaceMono(color: Colors.white),
+                  ),
+                  badgeStyle: BadgeStyle(badgeColor: Colors.grey),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => cartPage(),
+                      ));
+                    },
+                    child: Icon(
+                      Icons.shopping_cart,
+                      size: 33,
+                      color: Color(0xFF4C53A5),
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
