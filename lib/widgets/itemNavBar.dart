@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ItemNavBar extends StatelessWidget {
   @override
@@ -22,8 +23,8 @@ class ItemNavBar extends StatelessWidget {
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Text(
           '\$ 50',
-          style: TextStyle(
-              fontSize: 20,
+          style: GoogleFonts.spaceMono(
+              fontSize: 25,
               fontWeight: FontWeight.w900,
               color: Colors.blueAccent),
         ),
@@ -32,7 +33,8 @@ class ItemNavBar extends StatelessWidget {
           icon: Icon(CupertinoIcons.cart_badge_plus),
           label: Text(
             "Add to cart",
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
+            style: GoogleFonts.spaceMono(
+                fontSize: 15, fontWeight: FontWeight.w800),
           ),
           style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.grey),

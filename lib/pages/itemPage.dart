@@ -3,7 +3,9 @@ import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
+import '../models/items_model.dart';
 import '../widgets/itemNavBar.dart';
 import '../widgets/itemPageBar.dart';
 
@@ -15,6 +17,8 @@ class ItemPage extends StatelessWidget {
     Colors.yellowAccent,
     Colors.orangeAccent
   ];
+
+  List<Item> displayList = List.from(ItemList.displayList);
 
   @override
   Widget build(BuildContext context) {
@@ -42,12 +46,13 @@ class ItemPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
+                    //for (int i = 1; i < 9; i++)
                     Padding(
                         padding: EdgeInsets.only(top: 40, bottom: 20),
                         child: Row(
                           children: [
                             Text('Product Title',
-                                style: TextStyle(
+                                style: GoogleFonts.spaceMono(
                                     fontSize: 25,
                                     fontWeight: FontWeight.w800,
                                     color: Colors.blueGrey)),
@@ -94,7 +99,7 @@ class ItemPage extends StatelessWidget {
                                   margin: EdgeInsets.symmetric(horizontal: 10),
                                   child: Text(
                                     '01',
-                                    style: TextStyle(
+                                    style: GoogleFonts.spaceMono(
                                         fontSize: 13,
                                         fontWeight: FontWeight.w600,
                                         color: Colors.purpleAccent),
@@ -126,7 +131,7 @@ class ItemPage extends StatelessWidget {
                       child: Text(
                         'This is a more detailed description of the product, all required information should be populated here.',
                         textAlign: TextAlign.justify,
-                        style: TextStyle(
+                        style: GoogleFonts.spaceMono(
                           fontSize: 17,
                           fontWeight: FontWeight.w300,
                           color: Colors.blueGrey,
@@ -139,7 +144,7 @@ class ItemPage extends StatelessWidget {
                         children: [
                           Text(
                             'Size:   ',
-                            style: TextStyle(
+                            style: GoogleFonts.spaceMono(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.blueGrey),
@@ -180,7 +185,7 @@ class ItemPage extends StatelessWidget {
                         children: [
                           Text(
                             'Color: ',
-                            style: TextStyle(
+                            style: GoogleFonts.spaceMono(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.blueGrey),

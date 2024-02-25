@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ItemPageBar extends StatelessWidget {
   const ItemPageBar({super.key});
@@ -23,9 +24,9 @@ class ItemPageBar extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: EdgeInsets.only(left: 16),
             child: Text('Product X',
-                style: TextStyle(
+                style: GoogleFonts.spaceMono(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.blueGrey,
