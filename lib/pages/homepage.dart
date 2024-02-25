@@ -58,29 +58,11 @@ class HomePageState extends State<HomePage> {
         child: AppBar(
           backgroundColor: Colors.white,
           leading: Center(
-            //adding: const EdgeInsets.only(left: 50),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.local_mall,
-                  size: 30,
-                  color: Color(0xFF4C53A5),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 5),
-                  child: Text(
-                    "Kwetu Shop",
-                    style: GoogleFonts.spaceMono(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF4C53A5),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+              child: Image.asset(
+            'images/kwetu-removebg.png',
+            width: 150,
+            height: 150,
+          )),
         ),
       ),
       body: ListView(
