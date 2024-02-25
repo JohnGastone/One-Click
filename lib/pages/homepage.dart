@@ -56,14 +56,13 @@ class HomePageState extends State<HomePage> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50),
         child: AppBar(
-          backgroundColor: Colors.white,
-          leading: Center(
-              child: Image.asset(
-            'images/kwetu-removebg.png',
-            width: 150,
-            height: 150,
-          )),
-        ),
+            backgroundColor: Colors.white,
+            leading: Image.asset(
+              'images/kwetu-removebg.png',
+              width: 150,
+              height: 150,
+              alignment: Alignment.center,
+            )),
       ),
       body: ListView(
         controller: _pageController,
