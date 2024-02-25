@@ -27,7 +27,7 @@ class ItemList {
     Item(
         title: "Vuitton Watch",
         description: "A classy watch to fit your worth",
-        price: '45',
+        price: 'Tsh 150,000',
         discount: "10"),
     Item(
         title: "Laptop bag",
