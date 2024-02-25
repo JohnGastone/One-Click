@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, file_names
+// ignore_for_file: prefer_const_constructors, file_names, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -46,7 +46,7 @@ class ItemsWidget extends StatelessWidget {
                     ),
                     const Icon(
                       Icons.favorite_border_sharp,
-                      color: Color.fromARGB(255, 211, 102, 138),
+                      color: Color.fromARGB(252, 215, 160, 0),
                     )
                   ],
                 ),
@@ -95,7 +95,7 @@ class ItemsWidget extends StatelessWidget {
                           displayList[i].price,
                           style: GoogleFonts.spaceMono(
                               fontSize: 13,
-                              color: Color(0xFF4C53A5),
+                              color: Color.fromARGB(252, 215, 160, 0),
                               fontWeight: FontWeight.w500),
                         ),
                         Icon(Icons.shopping_cart_checkout_outlined,
