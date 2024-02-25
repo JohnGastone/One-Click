@@ -64,7 +64,7 @@ class HomePageState extends State<HomePage> {
               children: [
                 SizedBox(
                   width: 10,
-                  height: 30,
+                  // height: 30,
                 ),
                 Icon(
                   Icons.local_mall,
@@ -76,7 +76,7 @@ class HomePageState extends State<HomePage> {
                   child: Text(
                     "Kwetu Shop",
                     style: GoogleFonts.spaceMono(
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF4C53A5),
                     ),
