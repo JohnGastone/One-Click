@@ -17,12 +17,12 @@ class ItemList {
     Item(
         title: "Gucci Shoe",
         description: "A shoe worn by Bibi Titi Mohamed",
-        price: '67',
+        price: 'Tsh 67,000',
         discount: "10"),
     Item(
         title: "Gucci Shoe",
         description: "A shoe worn by Bibi Titi Mohamed",
-        price: '60',
+        price: 'Tsh 60,000',
         discount: "10"),
     Item(
         title: "Vuitton Watch",
