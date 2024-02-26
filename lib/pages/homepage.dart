@@ -30,7 +30,21 @@ class HomePageState extends State<HomePage> {
 
   int _selectedIndex = 0;
 
-  int maxCount = 5;
+  // Updated to handle dynamic page change
+  Widget _getCurrentPage() {
+    switch (_selectedIndex) {
+      case 0:
+        return HomePage(); // Ideally, return a custom widget for the home page
+      case 1:
+        return cartPage(); // Assuming CartPage is a widget
+      case 2:
+        return FavoriteItems(); // Assuming FavoriteItems is a widget
+      case 3:
+        return Profile(); // Assuming Profile is a widget
+      default:
+        return Text('Page not found'); // Fallback for undefined index
+    }
+  }
 
   /// widget list for notch bar
   final List<Widget> bottomBarPages = [
@@ -39,16 +53,6 @@ class HomePageState extends State<HomePage> {
     FavoriteItems(),
     Profile(),
   ];
-
-  void updateList(String value) {
-    // We will filter our list of movies here
-    setState(() {
-      displayList = ItemList.items
-          .where((element) =>
-              element.title.toLowerCase().contains(value.toLowerCase()))
-          .toList();
-    });
-  }
 
   List<Item> displayList = List.from(ItemList.displayList);
 
