@@ -26,6 +26,8 @@ class HomePageState extends State<HomePage> {
   int _page = 0;
 //List<Product> _products = [];
   final _pageController = PageController(initialPage: 2);
+  ScrollController _scrollController = ScrollController();
+
   int _selectedIndex = 0;
 
   int maxCount = 5;
@@ -53,21 +55,24 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(50),
-        child: Center(
-          child: AppBar(
-              backgroundColor: Colors.white,
-              leading: Image.asset(
-                'images/kwe2.png',
-                // width: 1000,
-                // height: 1000,
-                alignment: Alignment.center,
-              )),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        titleSpacing: 0, // Minimizes the default spacing
+        title: SizedBox(
+          width: double
+              .infinity, // Ensures the container takes all available horizontal space
+          child: Center(
+            child: Image.asset(
+              'images/kwe2.png',
+              width: 100, // Adjust width as needed
+              height: 120, // Adjust height as needed
+              fit: BoxFit.contain, // Ensures the image respects its bounds
+            ),
+          ),
         ),
       ),
       body: ListView(
-        controller: _pageController,
+        controller: _scrollController,
         // physics: const NeverScrollableScrollPhysics(),
         children: [
           // To add
