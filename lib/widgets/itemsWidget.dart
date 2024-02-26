@@ -17,7 +17,7 @@ class ItemsWidget extends StatelessWidget {
       crossAxisCount: 2,
       shrinkWrap: true,
       children: [
-        for (int i = 1; i < 9; i++)
+        for (int i = 1; i <= 10; i++)
           Expanded(
             child: Container(
               height: 330,
