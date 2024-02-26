@@ -56,7 +56,7 @@ class ItemList {
         discount: "10"),
     Item(
         title: "Gucci Shoe",
-        description: "A shoe worn by Bibi Titi Mohamed",
+        description: "A shoe worn by Mama Kizim'job",
         price: 'Tsh 56,000',
         discount: "10"),
     Item(
