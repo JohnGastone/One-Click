@@ -55,19 +55,19 @@ class ItemList {
         price: 'Tsh 67,000',
         discount: "10"),
     Item(
+        title: "Gucci Shoe",
+        description: "A shoe worn by Bibi Titi Mohamed",
+        price: 'Tsh 56,000',
+        discount: "10"),
+    Item(
+        title: "Gucci Shoe",
+        description: "A shoe worn by Bibi Titi Mohamed",
+        price: 'Tsh 56,000',
+        discount: "10"),
+    Item(
         title: "Anything else",
         description: "These are just few of many things",
         price: 'Tsh 67,000',
-        discount: "10"),
-    Item(
-        title: "Gucci Shoe",
-        description: "A shoe worn by Bibi Titi Mohamed",
-        price: 'Tsh 56,000',
-        discount: "10"),
-    Item(
-        title: "Gucci Shoe",
-        description: "A shoe worn by Bibi Titi Mohamed",
-        price: 'Tsh 56,000',
         discount: "10"),
   ];
   static List<Item> displayList = List.from(items);
