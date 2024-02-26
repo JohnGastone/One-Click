@@ -11,6 +11,7 @@ import 'package:tunzaaecommerce/pages/itemPage.dart';
 //import 'package:tunzaaecommerce/widgets/home_bar.dart';
 import 'package:curved_navigation_bar_with_label/curved_navigation_bar.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tunzaaecommerce/pages/profile.dart';
 
 import '../widgets/categoriesWidget.dart';
 import '../widgets/itemsWidget.dart';
@@ -36,7 +37,7 @@ class HomePageState extends State<HomePage> {
     HomePage(),
     const cartPage(),
     FavoriteItems(),
-    ItemPage(),
+    Profile(),
   ];
 
   void updateList(String value) {
