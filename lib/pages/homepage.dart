@@ -55,14 +55,16 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50),
-        child: AppBar(
-            backgroundColor: Colors.white,
-            leading: Image.asset(
-              'images/kwetu-removebg.png',
-              // width: 1000,
-              // height: 1000,
-              alignment: Alignment.center,
-            )),
+        child: Center(
+          child: AppBar(
+              backgroundColor: Colors.white,
+              leading: Image.asset(
+                'images/Kwetu_Proto_1-removebg-preview.png',
+                // width: 1000,
+                // height: 1000,
+                alignment: Alignment.center,
+              )),
+        ),
       ),
       body: ListView(
         controller: _pageController,
