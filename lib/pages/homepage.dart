@@ -59,7 +59,7 @@ class HomePageState extends State<HomePage> {
           child: AppBar(
               backgroundColor: Colors.white,
               leading: Image.asset(
-                'images/Kwetu_Proto_1-removebg-preview.png',
+                'images/kwe2.png',
                 // width: 1000,
                 // height: 1000,
                 alignment: Alignment.center,

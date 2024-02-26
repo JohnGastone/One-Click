@@ -3,7 +3,7 @@
    <application
         android:label="Dukani"
         android:name="${applicationName}"
-        android:icon="@mipmap/kibegi">
+        android:icon="@mipmap/kwe2">
         <activity
             android:name=".MainActivity"
             android:exported="true"
