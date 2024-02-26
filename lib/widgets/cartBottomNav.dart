@@ -17,14 +17,14 @@ class CartBottomNavBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text('Total :',
                     style: GoogleFonts.spaceMono(
                         color: Color(0xFF4C53A5),
                         fontSize: 22,
                         fontWeight: FontWeight.bold)),
-                Text('\$ 400',
+                Text('Tsh 814,000',
                     style: GoogleFonts.spaceMono(
                         color: Color(0xFF4C53A5),
                         fontSize: 22,
