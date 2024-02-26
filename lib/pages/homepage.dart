@@ -25,7 +25,6 @@ class HomePageState extends State<HomePage> {
   final TextEditingController _searchController = TextEditingController();
   int _page = 0;
 //List<Product> _products = [];
-  final _pageController = PageController(initialPage: 2);
   ScrollController _scrollController = ScrollController();
 
   int _selectedIndex = 0;
