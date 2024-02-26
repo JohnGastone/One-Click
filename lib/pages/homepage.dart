@@ -28,7 +28,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
 //List<Product> _products = [];
   ScrollController _scrollController = ScrollController();
 
-  var _selectedTab = _SelectedTab.home;
+  var _selectedTab = _SelectedTab.HomePage;
 
   void _handleIndexChanged(int i) {
     setState(() {
@@ -228,4 +228,5 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 }
 
-enum _SelectedTab { home, favorite, cart, profile }
+// ignore: constant_identifier_names
+enum _SelectedTab { HomePage, FavoriteItems, cartPage, Profile }
