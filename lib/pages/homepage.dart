@@ -182,7 +182,8 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
           margin: EdgeInsets.only(left: 10, right: 10),
           currentIndex: _SelectedTab.values.indexOf(_selectedTab),
           dotIndicatorColor: Colors.white,
-          unselectedItemColor: Colors.grey[300],
+          unselectedItemColor: Colors.blueGrey,
+          backgroundColor: Color.fromARGB(255, 245, 242, 242),
           // enableFloatingNavBar: false,
           onTap: _handleIndexChanged,
           items: [
