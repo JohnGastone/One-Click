@@ -56,7 +56,10 @@ class CartItems extends StatelessWidget {
                       Text(
                         displayList[i].price,
                         style: GoogleFonts.spaceMono(
-                            fontSize: 13, fontWeight: FontWeight.w400),
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400,
+                          color: Color.fromARGB(252, 215, 160, 0),
+                        ),
                       )
                     ],
                   ),
