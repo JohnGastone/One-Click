@@ -189,25 +189,25 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
             /// Home
             DotNavigationBarItem(
               icon: Icon(Icons.home),
-              selectedColor: Color(0xff73544C),
+              selectedColor: Color.fromARGB(252, 215, 160, 0),
             ),
 
             /// Likes
             DotNavigationBarItem(
               icon: Icon(Icons.favorite),
-              selectedColor: Color(0xff73544C),
+              selectedColor: Color.fromARGB(252, 215, 160, 0),
             ),
 
             /// Search
             DotNavigationBarItem(
-              icon: Icon(Icons.search),
-              selectedColor: Color(0xff73544C),
+              icon: Icon(Icons.shopping_cart),
+              selectedColor: Color.fromARGB(252, 215, 160, 0),
             ),
 
             /// Profile
             DotNavigationBarItem(
               icon: Icon(Icons.person),
-              selectedColor: Color(0xff73544C),
+              selectedColor: Color.fromARGB(252, 215, 160, 0),
             ),
           ],
         ),
