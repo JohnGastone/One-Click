@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, duplicate_ignore, must_be_immutable, prefer_final_fields, non_constant_identifier_names, unused_element, prefer_const_literals_to_create_immutables, unused_field, use_key_in_widget_constructors
 
 import 'package:badges/badges.dart';
+import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,38 +22,19 @@ class HomePage extends StatefulWidget {
   HomePageState createState() => HomePageState();
 }
 
-class HomePageState extends State<HomePage> {
-  GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+class HomePageState extends State<HomePage> with TickerProviderStateMixin {
   final TextEditingController _searchController = TextEditingController();
   int _page = 0;
 //List<Product> _products = [];
   ScrollController _scrollController = ScrollController();
 
-  int _selectedIndex = 0;
+  var _selectedTab = _SelectedTab.home;
 
-  // Updated to handle dynamic page change
-  Widget _getCurrentPage() {
-    switch (_selectedIndex) {
-      case 0:
-        return HomePage(); // Ideally, return a custom widget for the home page
-      case 1:
-        return cartPage(); // Assuming CartPage is a widget
-      case 2:
-        return FavoriteItems(); // Assuming FavoriteItems is a widget
-      case 3:
-        return Profile(); // Assuming Profile is a widget
-      default:
-        return Text('Page not found'); // Fallback for undefined index
-    }
+  void _handleIndexChanged(int i) {
+    setState(() {
+      _selectedTab = _SelectedTab.values[i];
+    });
   }
-
-  /// widget list for notch bar
-  final List<Widget> bottomBarPages = [
-    HomePage(),
-    const cartPage(),
-    FavoriteItems(),
-    Profile(),
-  ];
 
   List<Item> displayList = List.from(ItemList.displayList);
 
@@ -194,61 +176,44 @@ class HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 20,
-              color: Colors.black.withOpacity(.1),
-            )
-          ],
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
-            child: GNav(
-              rippleColor: Colors.grey[300]!,
-              hoverColor: Colors.grey[100]!,
-              gap: 8,
-              activeColor: Color.fromARGB(252, 215, 160, 0),
-              iconSize: 24,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Color.fromARGB(255, 194, 187, 187),
-              color: Color(0xFF4C53A5),
-              tabs: [
-                GButton(
-                  icon: CupertinoIcons.home,
-                  text: 'Home',
-                  textStyle: GoogleFonts.spaceMono(fontSize: 12),
-                ),
-                GButton(
-                  icon: CupertinoIcons.heart,
-                  text: 'Favorites',
-                  textStyle: GoogleFonts.spaceMono(fontSize: 12),
-                ),
-                GButton(
-                  icon: CupertinoIcons.cart_fill,
-                  text: 'Cart',
-                  textStyle: GoogleFonts.spaceMono(fontSize: 12),
-                ),
-                GButton(
-                  icon: CupertinoIcons.person_alt,
-                  text: 'Profile',
-                  textStyle: GoogleFonts.spaceMono(fontSize: 12),
-                ),
-              ],
-              selectedIndex: _selectedIndex,
-              onTabChange: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              },
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(bottom: 10),
+        child: DotNavigationBar(
+          margin: EdgeInsets.only(left: 10, right: 10),
+          currentIndex: _SelectedTab.values.indexOf(_selectedTab),
+          dotIndicatorColor: Colors.white,
+          unselectedItemColor: Colors.grey[300],
+          // enableFloatingNavBar: false,
+          onTap: _handleIndexChanged,
+          items: [
+            /// Home
+            DotNavigationBarItem(
+              icon: Icon(Icons.home),
+              selectedColor: Color(0xff73544C),
             ),
-          ),
+
+            /// Likes
+            DotNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              selectedColor: Color(0xff73544C),
+            ),
+
+            /// Search
+            DotNavigationBarItem(
+              icon: Icon(Icons.search),
+              selectedColor: Color(0xff73544C),
+            ),
+
+            /// Profile
+            DotNavigationBarItem(
+              icon: Icon(Icons.person),
+              selectedColor: Color(0xff73544C),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
+enum _SelectedTab { home, favorite, cart, profile }
