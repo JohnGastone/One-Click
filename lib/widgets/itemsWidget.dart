@@ -41,7 +41,7 @@ class ItemsWidget extends StatelessWidget {
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: Text(
-                            "-50%",
+                            "-20%",
                             style: GoogleFonts.spaceMono(
                                 color: Colors.white,
                                 fontSize: 14,
