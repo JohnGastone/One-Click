@@ -28,6 +28,9 @@ class CategoriesWidget extends StatelessWidget {
                     width: 60,
                     height: 60,
                   ),
+                  onTap: () {
+                    Navigator.pushNamed(context, 'itemPage');
+                  },
                 ),
                 Text(
                   displayCategories[index].title,
