@@ -1,8 +1,8 @@
+// ignore_for_file: must_be_immutable, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../data/data_bestSelling.dart';
 import '../models/categories_model.dart';
-import '../models/items_model.dart';
 
 class CategoriesWidget extends StatelessWidget {
   CategoriesWidget({super.key});
@@ -42,7 +42,7 @@ class CategoriesWidget extends StatelessWidget {
 }
 
 
-
+// OLD APPROACH
 // // ignore_for_file: prefer_const_constructors, unused_import, file_names, must_be_immutable
 // import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
