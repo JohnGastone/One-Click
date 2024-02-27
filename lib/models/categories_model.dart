@@ -9,28 +9,28 @@ class Category1 {
 class CategoryList {
   static List<Category1> categories = [
     Category1(
-      title: "Gucci Shoe",
+      title: "Lady's Shoes",
     ),
     Category1(
-      title: "Gucci Shoe",
+      title: "Classic Watches",
     ),
     Category1(
-      title: "Gucci Shoe",
+      title: "Laptop Bags",
     ),
     Category1(
-      title: "Gucci Shoe",
+      title: "Travel Bags",
     ),
     Category1(
-      title: "Gucci Shoe",
+      title: "Hand Bags",
     ),
     Category1(
-      title: "Gucci Shoe",
+      title: "Skonkinko",
     ),
     Category1(
-      title: "Gucci Shoe",
+      title: "Watches",
     ),
     Category1(
-      title: "Gucci Shoe",
+      title: "Snikers",
     )
   ];
   static List<Category1> displayCategories = List.from(categories);
