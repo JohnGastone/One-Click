@@ -34,7 +34,7 @@ class CategoriesWidget extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  for (int j = 1; j < 9; j++)
+                  for (int j = 1; j < 2; j++)
                     Image.asset(
                       // i variable changes the picture using the created for loop
                       "images/$i.png",
