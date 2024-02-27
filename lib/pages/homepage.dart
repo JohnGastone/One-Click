@@ -36,6 +36,16 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
     });
   }
 
+  void updateList(String value) {
+    // We will filter our list of movies here
+    setState(() {
+      displayList = ItemList.items
+          .where((element) =>
+              element.title!.toLowerCase().contains(value.toLowerCase()))
+          .toList();
+    });
+  }
+
   List<Item> displayList = List.from(ItemList.displayList);
 
   @override
@@ -91,6 +101,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         height: 50,
                         width: 270,
                         child: TextFormField(
+                          onChanged: (value) => updateList(value),
                           decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: 'Search Item..',
