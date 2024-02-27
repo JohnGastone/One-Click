@@ -40,7 +40,16 @@ class CategoriesWidget extends StatelessWidget {
     );
   }
 }
+// In solution above:
 
+// I've replaced the for-loop with List.generate, which is a more idiomatic way to generate widgets based on a list's length in Flutter. 
+//It automatically provides the correct index for each element, ensuring you stay within bounds.
+
+// The index + 1 in Image.asset("images/${index + 1}.png") assumes your images are named starting from 1.png to n.png. 
+//If your images start with 0.png, you should use index instead of index + 1.
+
+// This approach ensures that the CategoriesWidget dynamically adapts to the number of categories in displayCategories without exceeding the list's bounds, 
+//thus eliminating the RangeError.
 
 // OLD APPROACH
 // // ignore_for_file: prefer_const_constructors, unused_import, file_names, must_be_immutable
