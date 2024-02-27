@@ -22,10 +22,12 @@ class CategoriesWidget extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  "images/${index + 1}.png", // Assuming you have images named 1.png, 2.png, etc.
-                  width: 60,
-                  height: 60,
+                InkWell(
+                  child: Image.asset(
+                    "images/${index + 1}.png", // Assuming you have images named 1.png, 2.png, etc.
+                    width: 60,
+                    height: 60,
+                  ),
                 ),
                 Text(
                   displayCategories[index].title,
