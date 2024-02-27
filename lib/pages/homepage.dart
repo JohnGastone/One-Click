@@ -150,11 +150,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ),
 
                 //Categories
-                CategoriesWidget(
-                  // description: '',
-                  // price: 2,
-                  title: 'Gucci',
-                ),
+                CategoriesWidget(),
 
                 //Items
                 Container(

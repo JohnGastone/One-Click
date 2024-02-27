@@ -13,14 +13,7 @@ import '../models/items_model.dart';
 // }
 
 class CategoriesWidget extends StatelessWidget {
-  CategoriesWidget({
-    Key? key,
-    required this.title,
-    // required this.description,
-    // required this.price,
-  }) : super(key: key);
-
-  final String title;
+  CategoriesWidget({super.key});
   // final String description;
   // final double price;
   List<Category1> displayCategories = List.from(CategoryList.displayCategories);
@@ -41,7 +34,7 @@ class CategoriesWidget extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  for (int j = 1; j < 2; j++)
+                  for (int j = 1; j < 9; j++)
                     Image.asset(
                       // i variable changes the picture using the created for loop
                       "images/$i.png",
@@ -49,7 +42,7 @@ class CategoriesWidget extends StatelessWidget {
                       height: 60,
                     ),
                   Text(
-                    title,
+                    displayCategories[i].title,
                     style:
                         GoogleFonts.spaceMono(fontSize: 20, color: Colors.grey),
                   )
