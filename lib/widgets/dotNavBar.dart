@@ -67,3 +67,54 @@ class _NavBarState extends State<NavBar> with TickerProviderStateMixin {
 }
 
 enum _SelectedTab { HomePage, FavoriteItems, cartPage, Profile }
+
+
+
+// class HomePageState extends State<HomePage> with TickerProviderStateMixin {
+//   // Existing code...
+
+//   @override
+//   Widget build(BuildContext context) {
+//     // Determine the widget to display based on the selected tab
+//     Widget bodyContent;
+//     switch (_selectedTab) {
+//       case _SelectedTab.HomePage:
+//         bodyContent = _buildHomePageContent(); // A method to build home page content
+//         break;
+//       case _SelectedTab.FavoriteItems:
+//         bodyContent = Favorite(); // Assuming this is your favorites page widget
+//         break;
+//       case _SelectedTab.cartPage:
+//         bodyContent = CartPage(); // Your cart page widget
+//         break;
+//       case _SelectedTab.Profile:
+//         bodyContent = Profile(); // Your profile page widget
+//         break;
+//       default:
+//         bodyContent = _buildHomePageContent(); // Default to home page content
+//     }
+
+//     return Scaffold(
+//       appBar: _buildAppBar(), // Method to build AppBar
+//       body: bodyContent, // This now changes based on the selected tab
+//       bottomNavigationBar: _buildBottomNavigationBar(), // Method to build the bottom navigation bar
+//     );
+//   }
+
+//   // Method to build the AppBar widget
+//   AppBar _buildAppBar() {
+//     // Your existing AppBar code...
+//   }
+
+//   // Method to build the BottomNavigationBar widget
+//   Widget _buildBottomNavigationBar() {
+//     // Your existing BottomNavigationBar code...
+//   }
+
+//   // Method to build the HomePage content
+//   Widget _buildHomePageContent() {
+//     // Your existing ListView or any other widget that makes up the home content...
+//   }
+
+//   // Existing code...
+// }
