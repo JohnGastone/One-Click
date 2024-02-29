@@ -41,7 +41,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
     setState(() {
       displayList = ItemList.items
           .where((element) =>
-              element.title!.toLowerCase().contains(value.toLowerCase()))
+              element.title.toLowerCase().contains(value.toLowerCase()))
           .toList();
     });
   }
