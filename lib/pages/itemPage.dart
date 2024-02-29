@@ -18,6 +18,10 @@ class ItemPage extends StatelessWidget {
     Colors.orangeAccent
   ];
 
+  late final Item item;
+
+  ItemPage({required this.item}); // Modify constructor to accept an Item
+
   List<Item> displayList = List.from(ItemList.displayList);
 
   @override
@@ -30,7 +34,7 @@ class ItemPage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.all(16),
             child: Image.asset(
-              'images/2.png',
+              "images/2.png",
               height: 300,
               width: double.infinity,
             ),
@@ -51,7 +55,7 @@ class ItemPage extends StatelessWidget {
                         padding: EdgeInsets.only(top: 40, bottom: 20),
                         child: Row(
                           children: [
-                            Text('Product Title',
+                            Text(item.title,
                                 style: GoogleFonts.spaceMono(
                                     fontSize: 25,
                                     fontWeight: FontWeight.w800,
