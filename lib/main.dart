@@ -32,8 +32,8 @@ class MyApp extends StatelessWidget {
                 builder: (_) => Scaffold(
                         body: Center(
                             child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child: Text('Page not found, please \n retry!',
+                      padding: const EdgeInsets.symmetric(horizontal: 35),
+                      child: Text('Page not found, please retry!',
                           style: GoogleFonts.spaceMono(
                             fontSize: 30,
                             color: const Color(0xFF4C53A5),
