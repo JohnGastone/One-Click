@@ -30,12 +30,15 @@ class MyApp extends StatelessWidget {
             // If no such route exists, return a route to a "Not Found" page or similar
             return MaterialPageRoute(
                 builder: (_) => Scaffold(
-                    body: Center(
-                        child: Text('Page not found, please \n retry!',
-                            style: GoogleFonts.spaceMono(
-                              fontSize: 30,
-                              color: const Color(0xFF4C53A5),
-                            )))));
+                        body: Center(
+                            child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Text('Page not found, please \n retry!',
+                          style: GoogleFonts.spaceMono(
+                            fontSize: 30,
+                            color: const Color(0xFF4C53A5),
+                          )),
+                    ))));
         }
       },
     );
