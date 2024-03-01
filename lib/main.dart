@@ -31,8 +31,11 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(
                 builder: (_) => Scaffold(
                     body: Center(
-                        child: Text('Page not found',
-                            style: GoogleFonts.spaceMono(fontSize: 35)))));
+                        child: Text('Page not found, please \n retry!',
+                            style: GoogleFonts.spaceMono(
+                              fontSize: 30,
+                              color: const Color(0xFF4C53A5),
+                            )))));
         }
       },
     );
